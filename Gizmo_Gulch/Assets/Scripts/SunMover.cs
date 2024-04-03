@@ -24,7 +24,11 @@ public class SunMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventController.instance.OnTimeChange1 += NightMorning;
+        EventController.instance.OnTimeChange2 += MorningNoon;
+        EventController.instance.OnTimeChange3 += NoonEvening;
+        EventController.instance.OnTimeChange4 += EveningNight;
+        EventController.instance.OnTimeChange5 += ResetDay;
     }
 
     // Update is called once per frame
