@@ -17,9 +17,6 @@ public class SolarMover_PASS2 : MonoBehaviour
     public Transform eveningPosition;
     public Transform postDuskPosition;
 
-    //Sun movement speed
-    public float speed;
-
     //Rotation speed
     public float rotationSpeed;
 
@@ -40,14 +37,10 @@ public class SolarMover_PASS2 : MonoBehaviour
         if (isMoving)
         {
             // Rotate towards the target position
-            Quaternion targetRotation = Quaternion.LookRotation(targetPosition.position - sun.position);
-            sun.rotation = Quaternion.RotateTowards(sun.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            sun.rotation = Quaternion.RotateTowards(sun.rotation, targetPosition.rotation, rotationSpeed * Time.deltaTime);
 
-            // Move towards the target position
-            sun.position = Vector3.MoveTowards(sun.position, targetPosition.position, speed * Time.deltaTime);
-
-            // Check if the sun has reached the target position
-            if (sun.position == targetPosition.position)
+            // Check if the rotation has reached the target
+            if (Quaternion.Angle(sun.rotation, targetPosition.rotation) < 0.1f)
             {
                 isMoving = false; // Stop moving
             }
