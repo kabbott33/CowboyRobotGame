@@ -46,28 +46,28 @@ public class Clock : MonoBehaviour
     }
     public void DayStart()
     {
-        if (ticks == 0)
+        if (ticks == 0 && timePassing)
         {
             EventController.instance.isMorningNoon();
         }
     }
     public void MorningEnd()
     {
-        if (ticks == 24) 
+        if (ticks == 24 && timePassing) 
         {
             EventController.instance.isNoonEvening();
         }
     }
     public void NoonEnd()
     {
-        if (ticks == 48)
+        if (ticks == 48&&timePassing)
         {
             EventController.instance.isEveningNight();
         }
     }
     public void EveningEnd()
     {
-        if (ticks == 72)
+        if (ticks == 72&&timePassing)
         {
             EventController.instance.isResetDay();
            clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
@@ -75,6 +75,24 @@ public class Clock : MonoBehaviour
         }
     }
 
+    public void PauseTime()
+    {
+        timePassing = false;
+    }
+
+    public void ResumeTime()
+    {
+        timePassing = true;
+    }
+
+    public void IncrementTick()
+    {
+        if ((ticks != 24)||(ticks!=48)||(ticks!=72))
+            {
+            ticks ++;
+            tickTimer.text = "TICK" + ticks;
+        }
+    }
     /*
     // Function to increment ticks
     void IncrementTick()

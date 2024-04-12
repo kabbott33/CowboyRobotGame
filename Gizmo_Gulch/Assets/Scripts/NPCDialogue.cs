@@ -6,7 +6,7 @@ using Fungus;
 public class NPCDialogue : MonoBehaviour
 {
     public Flowchart flowchart;
-    public string balls;
+    public string startBlockName;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        flowchart.ExecuteBlock(balls);
+        flowchart.ExecuteBlock(startBlockName);
     }
 
 }
