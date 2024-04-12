@@ -11,10 +11,17 @@ public class Clock : MonoBehaviour
     public GameObject clockHand;
     public TextMeshProUGUI tickTimer;
 
+    public float tickRate = 1f;
+    public float nextTick = 0.0f;
+
+
+    public bool timePassing = true;
+
+
     void Start()
     {
         // Start the timer
-        InvokeRepeating("IncrementTick", 3, tickInterval);
+       // InvokeRepeating("IncrementTick", 3, tickInterval);
 
     }
 
@@ -23,14 +30,20 @@ public class Clock : MonoBehaviour
     {
         // Rotate the UI element around the z-axis based on ticks
         float rotationDegrees = ticks * 2.5f;
-        clockHand.transform.rotation = Quaternion.Euler(0, 0, 90-rotationDegrees);
+        clockHand.transform.rotation = Quaternion.Euler(0, 0, 90 - rotationDegrees);
         tickTimer.text = "TICK" + ticks;
         DayStart();
         MorningEnd();
         NoonEnd();
         EveningEnd();
-    }
 
+
+        if (Time.time > nextTick && timePassing)
+        {
+            nextTick = Time.time + tickRate;
+            ticks++;
+        }
+    }
     public void DayStart()
     {
         if (ticks == 0)
@@ -62,11 +75,14 @@ public class Clock : MonoBehaviour
         }
     }
 
+    /*
     // Function to increment ticks
     void IncrementTick()
     {
-        ticks++;
+ 
     }
+
+    */
 
     //tick += time.unscaleddeltatime*multiplier
 }
