@@ -154,6 +154,7 @@ public class FirstPersonController : MonoBehaviour
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
+
         }
 
         if(crosshair)
@@ -197,6 +198,21 @@ public class FirstPersonController : MonoBehaviour
 
         #endregion
     }
+
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Debug.Log("pagetti");
+        cameraCanMove = false;
+    }
+
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Debug.Log("balls");
+        cameraCanMove = true;
+    }
+
 
     float camRotation;
 
@@ -736,6 +752,7 @@ public class FirstPersonController : MonoBehaviour
             SerFPC.ApplyModifiedProperties();
         }
     }
+
 
 }
 
