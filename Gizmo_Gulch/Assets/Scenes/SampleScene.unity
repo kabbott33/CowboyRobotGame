@@ -2475,8 +2475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 182.43819
-    y: 300.27713
+    x: 173.57742
+    y: 354.70746
     width: 164.17
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2490,6 +2490,7 @@ MonoBehaviour:
   - {fileID: 609067135}
   - {fileID: 609067134}
   - {fileID: 609067144}
+  - {fileID: 609067164}
   suppressAllAutoSelections: 0
 --- !u!114 &609067127
 MonoBehaviour:
@@ -2526,8 +2527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 225.20293
-    y: 191.0543
+    x: 226.30183
+    y: 228.41699
     width: 83.89
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2556,9 +2557,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  text: What did you see?
+  text: Where did it occur?
   description: 
-  targetBlock: {fileID: 609067160}
+  targetBlock: {fileID: 609067130}
   hideIfVisited: 1
   interactable:
     booleanRef: {fileID: 0}
@@ -2581,8 +2582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 414.30887
-    y: 363.43707
+    x: 291.52444
+    y: 310.27267
     width: 170.07
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2758,8 +2759,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 10.038086
-    y: 201.71011
+    x: 116.3672
+    y: 305.50748
     width: 109.34
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3017,8 +3018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 392.45166
-    y: 137.8586
+    x: 395.3172
+    y: 194.4868
     width: 86.95
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3100,6 +3101,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &609067164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609067111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 59
+  indentLevel: 0
+  targetObject: {fileID: 1339778963}
+  methodName: ChangeCheckDC(15)
+  delay: 0
 --- !u!1 &661731318
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,6 +4140,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1424326858}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1339778970}
     - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}
       insertIndex: -1
@@ -4661,6 +4683,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 765268681}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1339778970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339778963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad727f62afa70bf4fa352979ca56c6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mechanics: 0
+  Rizz: 0
+  Emergence: 0
+  CheckDC: 0
 --- !u!1 &1424326857
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,33 +5226,33 @@ PrefabInstance:
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: zoom
-      value: 0.8200002
+      value: 0.9100001
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: scrollPos.x
-      value: -3.675436
+      value: -86.76042
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: scrollPos.y
-      value: -19.965055
+      value: -54.808636
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: selectedBlocks.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: 'selectedBlocks.Array.data[0]'
       value: 
-      objectReference: {fileID: 609067160}
+      objectReference: {fileID: 609067126}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: 'selectedBlocks.Array.data[1]'
@@ -5224,7 +5262,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'selectedCommands.Array.data[0]'
       value: 
-      objectReference: {fileID: 609067163}
+      objectReference: {fileID: 609067164}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: 'selectedCommands.Array.data[1]'
@@ -5243,12 +5281,12 @@ PrefabInstance:
     - target: {fileID: 8123567917092794010, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: nodeRect.x
-      value: 219.94118
+      value: 197.96567
       objectReference: {fileID: 0}
     - target: {fileID: 8123567917092794010, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: nodeRect.y
-      value: 68.35294
+      value: 121.413704
       objectReference: {fileID: 0}
     - target: {fileID: 8123567917092794010, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
@@ -5446,6 +5484,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 609067163}
+    - targetCorrespondingSourceObject: {fileID: 954276480338123502, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 609067164}
   m_SourcePrefab: {fileID: 100100000, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
 --- !u!1 &1552551709
 GameObject:
