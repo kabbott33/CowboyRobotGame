@@ -30,7 +30,7 @@ public class NpcRaycast : MonoBehaviour
                 if (hit.collider.CompareTag("NPC"))
                     {
                         hit.transform.GetComponent<NPCDialogue>().StartDialogue();
-                        Debug.Log("penis working");
+                        Debug.Log("working");
                     }
                 {
 
