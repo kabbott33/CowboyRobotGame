@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class SkillCheck : MonoBehaviour
 {
-    public int Mechanics;
-    public int Rizz;
-    public int Emergence;
-    public int CheckDC;
+    public float mechanics;
+    public float rizz;
+    public float emergence;
+    public float dastardlyDC;
 
     public Flowchart flowchart;
     public List<SkillCheck> fungusVariables;
@@ -47,16 +47,29 @@ public class SkillCheck : MonoBehaviour
 
     public void Success()
     {
-
+        Debug.Log("success");
     }
     public void Failure() 
     {
-       
+        Debug.Log("failiure");
     }
 
     public void DCTest()
     {
-        CheckDC =  flowchart.GetIntegerVariable("checkDC");
-        Debug.Log(CheckDC);
+        dastardlyDC =  flowchart.GetFloatVariable("checkDC");
+        Debug.Log(dastardlyDC);
+
+        float percentage = ((rizz / dastardlyDC) * 100);
+
+        Debug.Log(percentage);
+        if (Random.Range(0, 100) < percentage)
+
+        {
+            Success();
+        }
+        else
+        {
+            Failure();
+        }
     }
 }
