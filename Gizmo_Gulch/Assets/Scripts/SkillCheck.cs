@@ -15,6 +15,8 @@ public class SkillCheck : MonoBehaviour
     public Flowchart flowchart;
     public List<SkillCheck> fungusVariables;
 
+    public float percentage;
+
     public 
     // Start is called before the first frame update
     void Start()
@@ -48,22 +50,27 @@ public class SkillCheck : MonoBehaviour
     public void Success()
     {
         Debug.Log("success");
+        flowchart.SetBooleanVariable("success", true);
     }
     public void Failure() 
     {
         Debug.Log("failiure");
+        flowchart.SetBooleanVariable("success", false);
+    }
+
+    public void PreCheck()
+    {
+        dastardlyDC = flowchart.GetFloatVariable("checkDC");
+        Debug.Log(dastardlyDC);
+        percentage = ((rizz / dastardlyDC) * 100);
+
+        flowchart.SetStringVariable("checkText", ("Emergence Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
     }
 
     public void DCTest()
     {
-        dastardlyDC =  flowchart.GetFloatVariable("checkDC");
-        Debug.Log(dastardlyDC);
 
-        float percentage = ((ATTRIBUTECONTROLLER.GET_MECHANICS() / dastardlyDC) * 100);
-
-        Debug.Log(percentage);
         if (Random.Range(0, 100) < percentage)
-
         {
             Success();
         }
