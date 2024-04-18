@@ -58,13 +58,31 @@ public class SkillCheck : MonoBehaviour
         flowchart.SetBooleanVariable("success", false);
     }
 
-    public void PreCheck()
+    public void EmergencePreCheck()
+    {
+        dastardlyDC = flowchart.GetFloatVariable("checkDC");
+        Debug.Log(dastardlyDC);
+        percentage = ((emergence / dastardlyDC) * 100);
+
+        flowchart.SetStringVariable("checkText", ("Emergence Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+    }
+
+    public void AuthorityPreCheck()
     {
         dastardlyDC = flowchart.GetFloatVariable("checkDC");
         Debug.Log(dastardlyDC);
         percentage = ((rizz / dastardlyDC) * 100);
 
-        flowchart.SetStringVariable("checkText", ("Emergence Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+        flowchart.SetStringVariable("checkText", ("Authority Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+    }
+
+    public void MechanicsPreCheck()
+    {
+        dastardlyDC = flowchart.GetFloatVariable("checkDC");
+        Debug.Log(dastardlyDC);
+        percentage = ((mechanics / dastardlyDC) * 100);
+
+        flowchart.SetStringVariable("checkText", ("Mechanics Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
     }
 
     public void DCTest()
