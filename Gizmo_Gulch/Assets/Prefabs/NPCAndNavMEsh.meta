@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Gizmo_Gulch/Assets/Prefabs/NPCAndNavMEsh.meta
 guid: a2b37d182c01ea74abb0ffb951f01323
+========
+guid: 39692bc9549245c4c98d7774efcb9060
+>>>>>>>> Jacob!:Gizmo_Gulch/Assets/Prefabs/FungusFlowchartDemo.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
