@@ -22,6 +22,10 @@ public class NPCMovement : MonoBehaviour
         {
             MoveToNextTarget(); // Move to the next target
         }
+        //I need to make it so the npcs only move when the sun changes.
+
+
+
     }
 
     public void MoveToNextTarget()
