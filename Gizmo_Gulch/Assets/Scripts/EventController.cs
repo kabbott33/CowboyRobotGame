@@ -36,16 +36,44 @@ public class EventController : MonoBehaviour
         }
     }
 
-    public event Action OnTimeChange1;
-    public event Action OnTimeChange2;
-    public event Action OnTimeChange3;
-    public event Action OnTimeChange4;
-    public event Action OnTimeChange5;
-    public void TimeChanged()
+    public event Action NightMorning;
+    public event Action MorningNoon;
+    public event Action NoonEvening;
+    public event Action EveningNight;
+    public event Action ResetDay;
+    public void isNightMorning()
     {
-        if(OnTimeChange1 != null) 
+        if(NightMorning != null) 
         {
-            OnTimeChange1();
+            NightMorning();
+        }
+    }
+    public void isMorningNoon()
+    {
+        if (MorningNoon != null)
+        {
+            MorningNoon();
+        }
+    }
+    public void isNoonEvening()
+    {
+        if (NoonEvening != null)
+        {
+            NoonEvening();
+        }
+    }
+    public void isEveningNight()
+    {
+        if (EveningNight != null)
+        {
+            EveningNight();
+        }
+    }
+    public void isResetDay()
+    {
+        if (ResetDay != null)
+        {
+            ResetDay();
         }
     }
 }

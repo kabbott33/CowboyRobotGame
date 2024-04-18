@@ -13,7 +13,7 @@ public class CustomTrigger : MonoBehaviour
 
     private void Start()
     {
-        EventController.instance.OnTimeChange1 += AfterNoonTime;
+        //EventController.instance.isAfterNoonTime += AfterNoonTime;
         // IF YOU HAVE ANYTHING TO SUBSCRIBE FROM YOUR EVENT CONTROLLER SCRIPT DO IT HERE.
         // FOR EXAMPLE
         // EventController.instance.OnEnd += SubscribedEvent;
