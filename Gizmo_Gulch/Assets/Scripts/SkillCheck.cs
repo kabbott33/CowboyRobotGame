@@ -59,7 +59,7 @@ public class SkillCheck : MonoBehaviour
         dastardlyDC =  flowchart.GetFloatVariable("checkDC");
         Debug.Log(dastardlyDC);
 
-        float percentage = ((rizz / dastardlyDC) * 100);
+        float percentage = ((ATTRIBUTECONTROLLER.GET_MECHANICS() / dastardlyDC) * 100);
 
         Debug.Log(percentage);
         if (Random.Range(0, 100) < percentage)
