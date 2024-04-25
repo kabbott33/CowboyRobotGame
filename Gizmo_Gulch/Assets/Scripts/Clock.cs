@@ -20,8 +20,10 @@ public class Clock : MonoBehaviour
 
     void Start()
     {
+        EventController.instance.pauseTime += PauseTime;
+        EventController.instance.resumeTime += ResumeTime;
         // Start the timer
-       // InvokeRepeating("IncrementTick", 3, tickInterval);
+        // InvokeRepeating("IncrementTick", 3, tickInterval);
 
     }
 
@@ -55,6 +57,7 @@ public class Clock : MonoBehaviour
     {
         if (ticks == 24 && timePassing) 
         {
+            Debug.Log("plumpis");
             EventController.instance.isNoonEvening();
         }
     }

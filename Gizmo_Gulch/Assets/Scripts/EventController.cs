@@ -41,6 +41,11 @@ public class EventController : MonoBehaviour
     public event Action NoonEvening;
     public event Action EveningNight;
     public event Action ResetDay;
+
+    public event Action pauseTime;
+    public event Action resumeTime;
+
+    public event Action moveNPC;
     public void isNightMorning()
     {
         if(NightMorning != null) 
@@ -74,6 +79,30 @@ public class EventController : MonoBehaviour
         if (ResetDay != null)
         {
             ResetDay();
+        }
+    }
+
+    public void PauseTime()
+    {
+        if (pauseTime != null)
+        {
+            pauseTime();
+        }
+    }
+
+    public void ResumeTime()
+    {
+        if (resumeTime != null)
+        {
+            resumeTime();
+        }
+    }
+
+    public void MoveToNextTarget()
+    {
+        if (moveNPC != null)
+        {
+            moveNPC();
         }
     }
 }

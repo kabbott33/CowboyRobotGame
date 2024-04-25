@@ -11,19 +11,21 @@ public class NPCMovement : MonoBehaviour
 
     void Start()
     {
+        EventController.instance.moveNPC += MoveToNextTarget;
         agent = GetComponent<NavMeshAgent>();
         MoveToNextTarget(); // Start moving towards the first target
     }
 
     void Update()
     {
+        /*
         // Check if NPC has reached the current target
         if (!agent.pathPending && agent.remainingDistance < 0.1f)
         {
             MoveToNextTarget(); // Move to the next target
         }
         //I need to make it so the npcs only move when the sun changes.
-
+        */
 
 
     }

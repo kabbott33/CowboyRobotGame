@@ -29,6 +29,7 @@ public class SunMover_V2 : MonoBehaviour
         EventController.instance.EveningNight += StartEveningRotation;
         EventController.instance.ResetDay += StartPredawnRotation;
         // Event subscriptions remain unchanged
+
     }
 
     // Update is called once per frame
@@ -86,6 +87,10 @@ public class SunMover_V2 : MonoBehaviour
     // Coroutine to rotate towards a given target rotation
     private IEnumerator RotateTowards(Quaternion targetRotation)
     {
+        EventController.instance.PauseTime();
+        //EventController.instance.MoveToNextTarget();
+
+
         isRotating = true;
         Quaternion currentRotation = transform.rotation;
 
@@ -100,5 +105,6 @@ public class SunMover_V2 : MonoBehaviour
 
         // Rotation completed
         isRotating = false;
+        EventController.instance.ResumeTime();
     }
 }
