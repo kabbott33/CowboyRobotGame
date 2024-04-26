@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+public class EscapeMenu : MonoBehaviour
 {
     public float fadeInTime = 0.5f;
     private bool canTogglePause = true;
@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
         canvasGroup = this.GetComponent<CanvasGroup>();
         this.transform.localScale = Vector3.zero;
         Sequence sequence = DOTween.Sequence();
-        canvasGroup.alpha = 0f;
+        canvasGroup.alpha = 0f; 
     }
 
     // Update is called once per frame

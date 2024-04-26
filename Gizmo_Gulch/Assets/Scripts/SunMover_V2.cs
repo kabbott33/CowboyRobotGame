@@ -18,7 +18,7 @@ public class SunMover_V2 : MonoBehaviour
     public float speed;
     private float step;
 
-    private bool isRotating = false;
+    public bool isRotating = false;
 
     // Start is called before the first frame update
     void Start()
