@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,6 +17,8 @@ public class Clock : MonoBehaviour
 
 
     public bool timePassing = true;
+
+    public Flowchart flowchart;
 
 
     void Start()
@@ -50,7 +53,9 @@ public class Clock : MonoBehaviour
     {
         if (ticks == 0 && timePassing)
         {
-            EventController.instance.isMorningNoon();
+            EventController.instance.Morning();
+            EventController.instance.NPCsToMorning();
+            flowchart.SetStringVariable(("phase"), "morning");
         }
     }
     public void MorningEnd()
@@ -58,21 +63,26 @@ public class Clock : MonoBehaviour
         if (ticks == 24 && timePassing) 
         {
             Debug.Log("plumpis");
-            EventController.instance.isNoonEvening();
+            EventController.instance.Noon();
+            EventController.instance.NPCsToNoon();
+            flowchart.SetStringVariable(("phase"), "noon");
         }
     }
     public void NoonEnd()
     {
         if (ticks == 48&&timePassing)
         {
-            EventController.instance.isEveningNight();
+            EventController.instance.Evening();
+            EventController.instance.NPCsToEvening();
+            flowchart.SetStringVariable(("phase"), "evening");
         }
     }
     public void EveningEnd()
     {
         if (ticks == 72&&timePassing)
         {
-            EventController.instance.isResetDay();
+            EventController.instance.ResetDay();
+            EventController.instance.NPCsToNight();
            clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
             ticks = -24;
         }

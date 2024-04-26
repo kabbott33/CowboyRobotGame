@@ -23,11 +23,11 @@ public class SunMover_V2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventController.instance.NightMorning += StartPredawnRotation;
-        EventController.instance.MorningNoon += StartMorningRotation;
-        EventController.instance.NoonEvening += StartNoonRotation;
-        EventController.instance.EveningNight += StartEveningRotation;
-        EventController.instance.ResetDay += StartPredawnRotation;
+        EventController.instance.morning += Morning;
+        EventController.instance.noon += Noon;
+        EventController.instance.evening += Evening;
+        EventController.instance.night += Night;
+        EventController.instance.resetDay += ResetDay;
         // Event subscriptions remain unchanged
 
     }
@@ -40,7 +40,7 @@ public class SunMover_V2 : MonoBehaviour
     }
 
     // Method to start rotating towards predawn position
-    public void StartPredawnRotation()
+    public void ResetDay()
     {
         if (!isRotating)
         {
@@ -49,7 +49,7 @@ public class SunMover_V2 : MonoBehaviour
     }
 
     // Method to start rotating towards morning position
-    public void StartMorningRotation()
+    public void Morning()
     {
         if (!isRotating)
         {
@@ -58,7 +58,7 @@ public class SunMover_V2 : MonoBehaviour
     }
 
     // Method to start rotating towards noon position
-    public void StartNoonRotation()
+    public void Noon()
     {
         if (!isRotating)
         {
@@ -67,7 +67,7 @@ public class SunMover_V2 : MonoBehaviour
     }
 
     // Method to start rotating towards evening position
-    public void StartEveningRotation()
+    public void Evening()
     {
         if (!isRotating)
         {
@@ -76,7 +76,7 @@ public class SunMover_V2 : MonoBehaviour
     }
 
     // Method to start rotating towards post-dusk position
-    public void StartPostDuskRotation()
+    public void Night()
     {
         if (!isRotating)
         {
