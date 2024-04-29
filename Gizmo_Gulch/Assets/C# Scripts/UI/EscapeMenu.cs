@@ -46,6 +46,7 @@ public class PauseMenu : MonoBehaviour
         if (!(pauseMenu.activeInHierarchy))
             {
                 pauseMenu.gameObject.SetActive(true);
+                EventController.instance.isPaused = true;
                // Time.timeScale = 0;
                 tabMenu.gameObject.SetActive(false);
         
@@ -78,12 +79,13 @@ public class PauseMenu : MonoBehaviour
                     EventController.instance.ResumeTime();
                     EventController.instance.LockCursor();
                 }
-                /*
-                this.transform.DOScale(Vector3.zero, fadeInTime);
-                canvasGroup.DOFade(0f, fadeInTime);
-                */
-                // stopTime = (fadeInTime);
-            }
+            /*
+            this.transform.DOScale(Vector3.zero, fadeInTime);
+            canvasGroup.DOFade(0f, fadeInTime);
+            */
+            // stopTime = (fadeInTime);
+            EventController.instance.isPaused = false;
+        }
         /*
         this.transform.DOScale(Vector3.zero, fadeInTime);
         canvasGroup.DOFade(0f, fadeInTime);

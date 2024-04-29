@@ -97,10 +97,13 @@ public class SunMover_V2 : MonoBehaviour
         // Start rotating towards the target rotation
         while (Quaternion.Angle(currentRotation, targetRotation) > 0.1f)
         {
-            transform.rotation = Quaternion.RotateTowards(currentRotation, targetRotation, step);
-            currentRotation = transform.rotation;
-            // Wait for the next frame
-            yield return null;
+
+                transform.rotation = Quaternion.RotateTowards(currentRotation, targetRotation, step);
+                currentRotation = transform.rotation;
+                // Wait for the next frame
+                yield return null;
+      
+
         }
 
         // Rotation completed
