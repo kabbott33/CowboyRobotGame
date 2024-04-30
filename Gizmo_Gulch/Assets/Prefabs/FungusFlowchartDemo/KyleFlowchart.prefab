@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8003644709541012330
 Transform:
   m_ObjectHideFlags: 0
@@ -171,11 +171,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1989.2744, y: 482.1856}
+  scrollPos: {x: 1362.0134, y: 58.90475}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.25000027
+  zoom: 0.5799998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -3982,8 +3982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1132.6871
-    y: 311.5544
+    x: -1136.9729
+    y: 310.12585
     width: 156.26001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
