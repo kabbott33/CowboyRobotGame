@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: 
   description: 
-  objectives: []
+  objectives:
+  - Kill the doctor.
+  - Eat the doctor.
+  - 
+  - 
   rewards: []
   isActive: 0
   isCompleted: 0
