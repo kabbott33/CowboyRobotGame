@@ -39,6 +39,8 @@ public class FirstPersonController : MonoBehaviour
     private float pitch = 0.0f;
     private Image crosshairObject;
 
+
+
     #region Camera Zoom Variables
 
     public bool enableZoom = true;
@@ -151,9 +153,13 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
+        EventController.instance.lockCursor += LockCursor;
+        EventController.instance.unlockCursor += UnlockCursor;
+
+        if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
+
         }
 
         if(crosshair)
@@ -197,6 +203,21 @@ public class FirstPersonController : MonoBehaviour
 
         #endregion
     }
+
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Debug.Log("cursorunlocked");
+        cameraCanMove = false;
+    }
+
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Debug.Log("cursorlocked");
+        cameraCanMove = true;
+    }
+
 
     float camRotation;
 
@@ -736,6 +757,7 @@ public class FirstPersonController : MonoBehaviour
             SerFPC.ApplyModifiedProperties();
         }
     }
+
 
 }
 

@@ -88,6 +88,8 @@ namespace Fungus
 
         protected StringSubstituter stringSubstituer;
 
+
+
 #if UNITY_EDITOR
         public bool SelectedCommandsStale { get; set; }
 #endif

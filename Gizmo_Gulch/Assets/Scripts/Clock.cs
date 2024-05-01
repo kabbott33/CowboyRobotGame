@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -17,11 +18,17 @@ public class Clock : MonoBehaviour
 
     public bool timePassing = true;
 
+    public Flowchart flowchart;
+
+
+
 
     void Start()
     {
+        EventController.instance.pauseTime += PauseTime;
+        EventController.instance.resumeTime += ResumeTime;
         // Start the timer
-       // InvokeRepeating("IncrementTick", 3, tickInterval);
+        // InvokeRepeating("IncrementTick", 3, tickInterval);
 
     }
 
@@ -43,38 +50,77 @@ public class Clock : MonoBehaviour
             nextTick = Time.time + tickRate;
             ticks++;
         }
+
+        //this shit breaks the game because the sun mover co-routine yields any new return during a transition when a transition cannot progress
+
+        /*
+        if (EventController.instance.isPaused)
+        {
+            Time.timeScale = 0;
+        }
+        else if (!(EventController.instance.isPaused))
+        {
+            Time.timeScale = 1;
+        }
+        */
     }
     public void DayStart()
     {
-        if (ticks == 0)
+        if (ticks == 0 && timePassing)
         {
-            EventController.instance.isMorningNoon();
+            EventController.instance.Morning();
+            EventController.instance.NPCsToMorning();
+            flowchart.SetStringVariable(("phase"), "morning");
         }
     }
     public void MorningEnd()
     {
-        if (ticks == 24) 
+        if (ticks == 24 && timePassing) 
         {
-            EventController.instance.isNoonEvening();
+            Debug.Log("plumpis");
+            EventController.instance.Noon();
+            EventController.instance.NPCsToNoon();
+            flowchart.SetStringVariable(("phase"), "noon");
         }
     }
     public void NoonEnd()
     {
-        if (ticks == 48)
+        if (ticks == 48&&timePassing)
         {
-            EventController.instance.isEveningNight();
+            EventController.instance.Evening();
+            EventController.instance.NPCsToEvening();
+            flowchart.SetStringVariable(("phase"), "evening");
         }
     }
     public void EveningEnd()
     {
-        if (ticks == 72)
+        if (ticks == 72&&timePassing)
         {
-            EventController.instance.isResetDay();
+            EventController.instance.ResetDay();
+            EventController.instance.NPCsToNight();
            clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
             ticks = -24;
         }
     }
 
+    public void PauseTime()
+    {
+        timePassing = false;
+    }
+
+    public void ResumeTime()
+    {
+        timePassing = true;
+    }
+
+    public void IncrementTick()
+    {
+        if ((ticks != 24)||(ticks!=48)||(ticks!=72))
+            {
+            ticks ++;
+            tickTimer.text = "TICK" + ticks;
+        }
+    }
     /*
     // Function to increment ticks
     void IncrementTick()
