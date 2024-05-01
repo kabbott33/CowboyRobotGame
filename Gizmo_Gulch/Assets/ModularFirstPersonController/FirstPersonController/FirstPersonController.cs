@@ -207,14 +207,14 @@ public class FirstPersonController : MonoBehaviour
     public void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        Debug.Log("pagetti");
+        Debug.Log("cursorunlocked");
         cameraCanMove = false;
     }
 
     public void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Debug.Log("balls");
+        Debug.Log("cursorlocked");
         cameraCanMove = true;
     }
 
