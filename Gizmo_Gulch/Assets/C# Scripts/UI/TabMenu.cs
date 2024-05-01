@@ -80,6 +80,7 @@ public class TabMenu : MonoBehaviour
             */
             // stopTime = (fadeInTime);
             EventController.instance.isPaused = false ;
+            EventController.instance.ResumeTime();
         }
     }
 

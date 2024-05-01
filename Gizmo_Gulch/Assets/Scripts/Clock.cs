@@ -110,7 +110,11 @@ public class Clock : MonoBehaviour
 
     public void ResumeTime()
     {
-        timePassing = true;
+        if (!(EventController.instance.isPaused))
+        {
+            timePassing = true;
+        }
+
     }
 
     public void IncrementTick()

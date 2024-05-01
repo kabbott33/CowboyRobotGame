@@ -20,7 +20,7 @@ public class NpcRaycast : MonoBehaviour
 
    public void PlayerCheck()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if ((Input.GetKeyDown(KeyCode.E)) && !(EventController.instance.isRotating))
         {
             RaycastHit hit;
             if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, interactDistance))

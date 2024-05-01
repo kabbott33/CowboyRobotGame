@@ -85,6 +85,7 @@ public class PauseMenu : MonoBehaviour
             */
             // stopTime = (fadeInTime);
             EventController.instance.isPaused = false;
+            EventController.instance.ResumeTime();
         }
         /*
         this.transform.DOScale(Vector3.zero, fadeInTime);
