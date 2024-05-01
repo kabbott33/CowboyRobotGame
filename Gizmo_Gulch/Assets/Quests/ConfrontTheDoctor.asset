@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: 
   description: 
-  objectives: []
+  objectives:
+  - hahaha kill a man
+  - bury him
   rewards: []
   isActive: 0
   isCompleted: 0
