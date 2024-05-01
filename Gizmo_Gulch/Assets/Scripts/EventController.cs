@@ -12,6 +12,7 @@ public class EventController : MonoBehaviour
     //public bools
 
     public bool isPaused;
+    public bool isRotating;
 
     private void Awake()
     {

@@ -4616,6 +4616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
+  isRotating: 0
 --- !u!4 &544106338
 Transform:
   m_ObjectHideFlags: 0
@@ -10645,7 +10646,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &609067278
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13029,6 +13030,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController
       objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}
       propertyPath: field of view
@@ -13715,7 +13721,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31060
+  m_Name: pb_Mesh31558
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -19168,17 +19174,17 @@ PrefabInstance:
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: zoom
-      value: 0.67000026
+      value: 0.9100001
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: scrollPos.x
-      value: -274.66122
+      value: 618.4382
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: scrollPos.y
-      value: 42.740383
+      value: -196.37408
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
@@ -19213,12 +19219,12 @@ PrefabInstance:
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: selectedBlocks.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}

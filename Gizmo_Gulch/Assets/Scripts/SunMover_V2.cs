@@ -91,7 +91,7 @@ public class SunMover_V2 : MonoBehaviour
         //EventController.instance.MoveToNextTarget();
 
 
-        isRotating = true;
+        EventController.instance.isRotating = true;
         Quaternion currentRotation = transform.rotation;
 
         // Start rotating towards the target rotation
