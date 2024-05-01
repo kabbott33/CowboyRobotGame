@@ -107,7 +107,7 @@ public class SunMover_V2 : MonoBehaviour
         }
 
         // Rotation completed
-        isRotating = false;
+        EventController.instance.isRotating = false;
         EventController.instance.ResumeTime();
     }
 }
