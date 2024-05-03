@@ -50,6 +50,19 @@ public class Clock : MonoBehaviour
             nextTick = Time.time + tickRate;
             ticks++;
         }
+
+        //this shit breaks the game because the sun mover co-routine yields any new return during a transition when a transition cannot progress
+
+        /*
+        if (EventController.instance.isPaused)
+        {
+            Time.timeScale = 0;
+        }
+        else if (!(EventController.instance.isPaused))
+        {
+            Time.timeScale = 1;
+        }
+        */
     }
     public void DayStart()
     {
@@ -97,7 +110,11 @@ public class Clock : MonoBehaviour
 
     public void ResumeTime()
     {
-        timePassing = true;
+        if (!(EventController.instance.isPaused))
+        {
+            timePassing = true;
+        }
+
     }
 
     public void IncrementTick()

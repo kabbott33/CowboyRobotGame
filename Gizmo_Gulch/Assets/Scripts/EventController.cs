@@ -9,6 +9,11 @@ public class EventController : MonoBehaviour
     //Making this a singleton Class
     public static EventController instance;
 
+    //public bools
+
+    public bool isPaused;
+    public bool isRotating;
+
     private void Awake()
     {
         instance = this;

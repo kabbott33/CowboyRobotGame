@@ -91,20 +91,23 @@ public class SunMover_V2 : MonoBehaviour
         //EventController.instance.MoveToNextTarget();
 
 
-        isRotating = true;
+        EventController.instance.isRotating = true;
         Quaternion currentRotation = transform.rotation;
 
         // Start rotating towards the target rotation
         while (Quaternion.Angle(currentRotation, targetRotation) > 0.1f)
         {
-            transform.rotation = Quaternion.RotateTowards(currentRotation, targetRotation, step);
-            currentRotation = transform.rotation;
-            // Wait for the next frame
-            yield return null;
+
+                transform.rotation = Quaternion.RotateTowards(currentRotation, targetRotation, step);
+                currentRotation = transform.rotation;
+                // Wait for the next frame
+                yield return null;
+      
+
         }
 
         // Rotation completed
-        isRotating = false;
+        EventController.instance.isRotating = false;
         EventController.instance.ResumeTime();
     }
 }
