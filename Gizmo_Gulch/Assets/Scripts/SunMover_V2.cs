@@ -14,6 +14,8 @@ public class SunMover_V2 : MonoBehaviour
     public Transform eveningPosition;
     public Transform postDuskPosition;
 
+    public bool hoorayThisWillSurelyWorkCorrectly;
+
     //Sun movement speed
     public float speed;
     private float step;
@@ -30,6 +32,7 @@ public class SunMover_V2 : MonoBehaviour
         EventController.instance.resetDay += ResetDay;
         // Event subscriptions remain unchanged
 
+        this.transform.rotation = predawnPosition.rotation;
     }
 
     // Update is called once per frame
@@ -42,19 +45,30 @@ public class SunMover_V2 : MonoBehaviour
     // Method to start rotating towards predawn position
     public void ResetDay()
     {
+
         if (!isRotating)
         {
+            speed = 2000;
+            hoorayThisWillSurelyWorkCorrectly = true;
             StartCoroutine(RotateTowards(predawnPosition.rotation));
+         
         }
     }
 
     // Method to start rotating towards morning position
     public void Morning()
     {
+        /*
+        this.transform.rotation = predawnPosition.rotation;
+        speed = 20f;
+        */
+        
         if (!isRotating)
         {
+     
             StartCoroutine(RotateTowards(morningPosition.rotation));
         }
+        
     }
 
     // Method to start rotating towards noon position
@@ -80,7 +94,9 @@ public class SunMover_V2 : MonoBehaviour
     {
         if (!isRotating)
         {
+            speed = 0.35f;
             StartCoroutine(RotateTowards(postDuskPosition.rotation));
+          
         }
     }
 
@@ -108,6 +124,21 @@ public class SunMover_V2 : MonoBehaviour
 
         // Rotation completed
         EventController.instance.isRotating = false;
-        EventController.instance.ResumeTime();
+
+        if (!(hoorayThisWillSurelyWorkCorrectly))
+        {
+            EventController.instance.ResumeTime();
+        }
+        else if (hoorayThisWillSurelyWorkCorrectly) 
+        {
+            speed = 20;
+            
+        }
+        
+    }
+
+    public void WorkinLikeADog()
+    {
+        hoorayThisWillSurelyWorkCorrectly = false;
     }
 }
