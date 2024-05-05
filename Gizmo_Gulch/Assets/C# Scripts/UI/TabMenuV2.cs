@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TabMenu : MonoBehaviour
+public class TabMenuV2 : MonoBehaviour
 {
     //public float fadeInTime = 0.5f;
 
@@ -16,6 +16,8 @@ public class TabMenu : MonoBehaviour
 
     public Flowchart flowchart;
     public GameObject pauseMenu;
+    public GameObject folderMenu;
+    public GameObject insideFolderMenu;
     //private CanvasGroup canvasGroup;
     //public float stopTime;
     // Start is called before the first frame update
@@ -44,47 +46,43 @@ public class TabMenu : MonoBehaviour
     public void ToggleTabScreen()
     {
         if (!(tabMenu.activeInHierarchy))
-            {
+        {
             tabMenu.gameObject.SetActive(true);
-            EventController.instance.isPaused = true;
+            folderMenu.gameObject.SetActive(true);
             // Time.timeScale = 0;
             pauseMenu.gameObject.SetActive(false);
 
+
             EventController.instance.UnlockCursor();
             EventController.instance.PauseTime();
-            }
+        }
         else if (tabMenu.activeSelf)
         {
-            if (!(Input.GetKey(KeyCode.Mouse0)))
+            insideFolderMenu.gameObject.SetActive(false);
+            tabMenu.gameObject.SetActive(false);
+            folderMenu.gameObject.SetActive(false);
+
+            /*
+            if (!(sunMover.isRotating))
             {
-                tabMenu.gameObject.SetActive(false);
-
-
-                /*
-                if (!(sunMover.isRotating))
-                {
-                    Time.timeScale = 1;
-                }
-                else if (sunMover.isRotating)
-                {
-                    EventController.instance.LockCursor();
-                }
-                */
-
-                if ((flowchart.GetBooleanVariable("isTalking")) == false)
-                {
-                    EventController.instance.ResumeTime();
-                    EventController.instance.LockCursor();
-                }
-                /*
-                this.transform.DOScale(Vector3.zero, fadeInTime);
-                canvasGroup.DOFade(0f, fadeInTime);
-                */
-                // stopTime = (fadeInTime);
-                EventController.instance.isPaused = false;
-                EventController.instance.ResumeTime();
+                Time.timeScale = 1;
             }
-               
+            else if (sunMover.isRotating)
+            {
+                EventController.instance.LockCursor();
+            }
+            */
+
+            if ((flowchart.GetBooleanVariable("isTalking")) == false)
+            {
+                EventController.instance.ResumeTime();
+                EventController.instance.LockCursor();
+            }
+            /*
+            this.transform.DOScale(Vector3.zero, fadeInTime);
+            canvasGroup.DOFade(0f, fadeInTime);
+            */
+            // stopTime = (fadeInTime);
         }
     }
 
