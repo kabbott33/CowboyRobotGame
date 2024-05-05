@@ -10,6 +10,7 @@ public class EventController : MonoBehaviour
     public static EventController instance;
 
     //public bools
+    public float interactDistance = 5f;
 
     public bool isPaused;
     public bool isRotating;
