@@ -55,32 +55,36 @@ public class TabMenu : MonoBehaviour
             }
         else if (tabMenu.activeSelf)
         {
-
-            tabMenu.gameObject.SetActive(false);
-
-            /*
-            if (!(sunMover.isRotating))
+            if (!(Input.GetKey(KeyCode.Mouse0)))
             {
-                Time.timeScale = 1;
-            }
-            else if (sunMover.isRotating)
-            {
-                EventController.instance.LockCursor();
-            }
-            */
+                tabMenu.gameObject.SetActive(false);
 
-            if ((flowchart.GetBooleanVariable("isTalking")) == false)
-            {
+
+                /*
+                if (!(sunMover.isRotating))
+                {
+                    Time.timeScale = 1;
+                }
+                else if (sunMover.isRotating)
+                {
+                    EventController.instance.LockCursor();
+                }
+                */
+
+                if ((flowchart.GetBooleanVariable("isTalking")) == false)
+                {
+                    EventController.instance.ResumeTime();
+                    EventController.instance.LockCursor();
+                }
+                /*
+                this.transform.DOScale(Vector3.zero, fadeInTime);
+                canvasGroup.DOFade(0f, fadeInTime);
+                */
+                // stopTime = (fadeInTime);
+                EventController.instance.isPaused = false;
                 EventController.instance.ResumeTime();
-                EventController.instance.LockCursor();
             }
-            /*
-            this.transform.DOScale(Vector3.zero, fadeInTime);
-            canvasGroup.DOFade(0f, fadeInTime);
-            */
-            // stopTime = (fadeInTime);
-            EventController.instance.isPaused = false ;
-            EventController.instance.ResumeTime();
+               
         }
     }
 

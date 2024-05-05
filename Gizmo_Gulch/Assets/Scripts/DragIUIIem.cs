@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class DragIUIIem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public Image evidence;
     public Transform parentAfterDrag;
+
+
+    public void Start()
+    {
+        evidence = GetComponent<Image>();
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Start Drag");

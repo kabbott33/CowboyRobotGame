@@ -11,6 +11,7 @@ public class NodeBoardManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        activeNodes.Add("a2_location");
     }
 
     public void AddNode(string nodeIdentifier) 
