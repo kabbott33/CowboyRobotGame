@@ -9,6 +9,12 @@ public class EventController : MonoBehaviour
     //Making this a singleton Class
     public static EventController instance;
 
+    //public bools
+    public float interactDistance = 5f;
+
+    public bool isPaused;
+    public bool isRotating;
+
     private void Awake()
     {
         instance = this;
@@ -36,44 +42,135 @@ public class EventController : MonoBehaviour
         }
     }
 
-    public event Action NightMorning;
-    public event Action MorningNoon;
-    public event Action NoonEvening;
-    public event Action EveningNight;
-    public event Action ResetDay;
-    public void isNightMorning()
+    public event Action morning;
+    public event Action noon;
+    public event Action evening;
+    public event Action night;
+    public event Action resetDay;
+
+    public event Action pauseTime;
+    public event Action resumeTime;
+
+    // public event Action moveNPC;
+
+    public event Action npcsToMorning;
+    public event Action npcsToNoon;
+    public event Action npcsToEvening;
+    public event Action npcsToNight;
+
+    // lock/unlock cursor stuff
+
+    public event Action lockCursor;
+    public event Action unlockCursor;
+
+    public void Morning()
     {
-        if(NightMorning != null) 
+        if(morning != null) 
         {
-            NightMorning();
+            morning();
         }
     }
-    public void isMorningNoon()
+    public void Noon()
     {
-        if (MorningNoon != null)
+        if (noon != null)
         {
-            MorningNoon();
+           noon();
         }
     }
-    public void isNoonEvening()
+    public void Evening()
     {
-        if (NoonEvening != null)
+        if (evening != null)
         {
-            NoonEvening();
+            evening();
         }
     }
-    public void isEveningNight()
+    public void Night()
     {
-        if (EveningNight != null)
+        if (night != null)
         {
-            EveningNight();
+            night();
         }
     }
-    public void isResetDay()
+    public void ResetDay()
     {
-        if (ResetDay != null)
+        if (resetDay != null)
         {
-            ResetDay();
+            resetDay();
         }
     }
+
+    public void PauseTime()
+    {
+        if (pauseTime != null)
+        {
+            pauseTime();
+        }
+    }
+
+    public void ResumeTime()
+    {
+        if (resumeTime != null)
+        {
+            resumeTime();
+        }
+    }
+
+    public void NPCsToMorning()
+    {
+        if (npcsToMorning != null)
+        {
+            npcsToMorning();
+        }
+    }
+
+    public void NPCsToNoon()
+    {
+        if (npcsToNoon != null)
+        {
+            npcsToNoon();
+        }
+    }
+
+    public void NPCsToEvening()
+    {
+        if (npcsToEvening != null)
+        {
+            npcsToEvening();
+        }
+    }
+
+    public void NPCsToNight()
+    {
+        if (npcsToNight != null)
+        {
+            npcsToNight();
+        }
+    }
+
+
+    /*
+    public void MoveToNextTarget()
+    {
+        if (moveNPC != null)
+        {
+            moveNPC();
+        }
+    }
+    */
+    public void LockCursor()
+    {
+        if (lockCursor != null)
+        {
+            lockCursor();
+        }
+    }
+
+    public void UnlockCursor()
+    {
+        if (unlockCursor != null)
+        {
+            unlockCursor();
+        }
+    }
+
 }
