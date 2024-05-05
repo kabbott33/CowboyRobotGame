@@ -11,6 +11,8 @@ public class NPCDialogue : MonoBehaviour
     public GameObject player;
 
     private Quaternion storedRotation;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +27,12 @@ public class NPCDialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        flowchart.ExecuteBlock(startBlockName);
-        LookAtPlayer();
+        if (this.gameObject.GetComponent<NPCMovement>().canTalk == true)
+        {
+            flowchart.ExecuteBlock(startBlockName);
+            LookAtPlayer();
+        }
+
     }
 
     public void LookAtPlayer()
