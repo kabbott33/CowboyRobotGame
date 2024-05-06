@@ -43,6 +43,8 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     
 
     public bool isLockedIn;
+
+    public GameObject board;
     void Start()
     {
         identifier = this.gameObject.name;
@@ -64,7 +66,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
             if (isEvidence) 
             {
                 Debug.Log("Start Drag");
-                parentAfterDrag = transform.parent;
+                //parentAfterDrag = transform.parent;
                 transform.SetParent(transform.root);
                 transform.SetAsLastSibling();
                 evidence.raycastTarget = false;
@@ -96,11 +98,14 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         if (!(isLockedIn))
         {
             Debug.Log("End Drag");
-            transform.SetParent(parentAfterDrag);
-            evidence.raycastTarget = true;
+
+           
         }
+        evidence.raycastTarget = true;
+        transform.SetParent(board.transform);
+        transform.SetAsLastSibling();
 
-
+        CheckFloatingNodes();
 
        // goToPosition();
         //DropIntoBoard();
@@ -201,12 +206,22 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            flowchart.SetStringVariable("evidenceDescription", description);
+            flowchart.ExecuteBlock("EVIDENCE");
+        }
 
 
-        flowchart.SetStringVariable("evidenceDescription",description);
-        flowchart.ExecuteBlock("EVIDENCE");
     }
 
+    public void CheckFloatingNodes()
+    {
+        if ((isInBoard) && (!isLockedIn))
+        {
+            goToPosition();
+        }
+    }
 
 
     /*

@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Bed
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Text
   - Water
   - UI
   - 

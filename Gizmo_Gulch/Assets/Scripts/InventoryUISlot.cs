@@ -21,7 +21,7 @@ public class InventoryUISlot : MonoBehaviour, IDropHandler
         */
         GameObject dropped = eventData.pointerDrag;
         Node Draggableitem = dropped.GetComponent<Node>();
-        Draggableitem.parentAfterDrag = transform;
+       // Draggableitem.parentAfterDrag = transform;
         Draggableitem.isInBoard = true;
         Draggableitem.goToPosition();
 
