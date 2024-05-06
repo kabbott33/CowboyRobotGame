@@ -2,12 +2,13 @@ using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-    public float tickInterval = 1.0f; // Interval between ticks in seconds
+    public float tickInterval = 1f; // Interval between ticks in seconds
     private float ticks = 0; // Number of ticks
     public GameObject clockHand;
     public TextMeshProUGUI tickTimer;
@@ -20,7 +21,7 @@ public class Clock : MonoBehaviour
 
     public Flowchart flowchart;
 
-
+    public GameObject camera;
 
 
     void Start()
@@ -29,6 +30,8 @@ public class Clock : MonoBehaviour
         EventController.instance.resumeTime += ResumeTime;
         // Start the timer
         // InvokeRepeating("IncrementTick", 3, tickInterval);
+      
+
 
     }
 
@@ -43,6 +46,10 @@ public class Clock : MonoBehaviour
         MorningEnd();
         NoonEnd();
         EveningEnd();
+        SleepAction();
+        
+
+
 
 
         if (Time.time > nextTick && timePassing)
@@ -68,6 +75,7 @@ public class Clock : MonoBehaviour
     {
         if (ticks == 0 && timePassing)
         {
+            Debug.Log("start");
             EventController.instance.Morning();
             EventController.instance.NPCsToMorning();
             flowchart.SetStringVariable(("phase"), "morning");
@@ -92,18 +100,66 @@ public class Clock : MonoBehaviour
             flowchart.SetStringVariable(("phase"), "evening");
         }
     }
+    
     public void EveningEnd()
     {
         if (ticks == 72&&timePassing)
         {
-            EventController.instance.ResetDay();
+           
+            EventController.instance.Night();
+            //EventController.instance.ResetDay();
             EventController.instance.NPCsToNight();
            clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
-            ticks = -24;
+            //ticks = -24;
+            //EventController.instance.PauseTime();
         }
     }
+    /*
+    public void SleepTime()
+    {
+        if (ticks == 73 && timePassing)
+        {
+            Debug.Log("POOPISS");
+            EventController.instance.PauseTime();
+           
+        }
+    }
+*/
+    public void SleepAction()
+    {
+        if ((Input.GetKeyDown(KeyCode.F)) && (ticks == 72 ) && (!timePassing))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, EventController.instance.interactDistance))
+            {
+                //Debug.Log(hit.collider.name);
 
-    public void PauseTime()
+                if (hit.collider.CompareTag("Bed"))
+                {
+
+
+                    // EventController.instance.ResumeTime();
+                    //Debug.Log("PISSPOO");
+                    EventController.instance.PauseTime();
+                    ticks = -10;
+                       EventController.instance.UnlockCursor();
+                        EventController.instance.ResetDay();
+                    
+                       
+
+                }
+                
+
+               
+            }
+        }
+    }
+    
+    
+
+
+
+public void PauseTime()
     {
         timePassing = false;
     }
@@ -135,4 +191,6 @@ public class Clock : MonoBehaviour
     */
 
     //tick += time.unscaleddeltatime*multiplier
+
+    
 }

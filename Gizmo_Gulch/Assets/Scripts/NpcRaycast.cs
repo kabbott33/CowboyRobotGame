@@ -5,7 +5,7 @@ using UnityEngine;
 public class NpcRaycast : MonoBehaviour
 {
     // private Inventory inventory;
-    public float interactDistance = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class NpcRaycast : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.E)) && !(EventController.instance.isRotating))
         {
             RaycastHit hit;
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, interactDistance))
+            if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, EventController.instance.interactDistance))
             {
                 //Debug.Log(hit.collider.name);
 

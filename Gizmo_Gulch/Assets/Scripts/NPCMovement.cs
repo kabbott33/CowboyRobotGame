@@ -9,16 +9,21 @@ public class NPCMovement : MonoBehaviour
     public Transform[] targets; // Array to hold multiple targets
     private int currentTargetIndex = 1; // Index of the current target
      */
+    public GameObject NPC;
     private NavMeshAgent agent;
-   
+
+    private Transform currentPosition;
 
     public GameObject nightPosition;
     public GameObject morningPosition;
     public GameObject noonPosition;
     public GameObject eveningPosition;
 
+    public bool canTalk = true;
+
     void Start()
     {
+        NPC = this.gameObject;
         //EventController.instance.moveNPC += MoveToNextTarget;
 
         EventController.instance.npcsToMorning += NPCsToMorning;
@@ -27,40 +32,48 @@ public class NPCMovement : MonoBehaviour
         EventController.instance.npcsToNight += NPCsToNight;
 
 
-        agent = GetComponent<NavMeshAgent>();
+        agent = NPC.GetComponent<NavMeshAgent>();
        // MoveToNextTarget(); // Start moving towards the first target
     }
 
     public void NPCsToMorning()
     {
         agent.SetDestination(morningPosition.transform.position);
+        currentPosition = morningPosition.transform;
+        canTalk = false;
     }
 
     public void NPCsToNoon()
     {
         agent.SetDestination(noonPosition.transform.position);
+        currentPosition = noonPosition.transform;
+        canTalk = false;
     }
 
     public void NPCsToEvening()
     {
         agent.SetDestination(eveningPosition.transform.position);
+        currentPosition = eveningPosition.transform;
+        canTalk = false;
     }
 
     public void NPCsToNight()
     {
         agent.SetDestination(nightPosition.transform.position);
+        currentPosition = nightPosition.transform;
+        canTalk = false;
     }
 
     void Update()
     {
-        /*
-        // Check if NPC has reached the current target
-        if (!agent.pathPending && agent.remainingDistance < 0.1f)
+  
+        if ((!agent.pathPending && agent.remainingDistance < 0.1f)&&!canTalk)
         {
-            MoveToNextTarget(); // Move to the next target
+            NPC.transform.rotation = currentPosition.rotation;
+            canTalk=true;
+            
         }
-        //I need to make it so the npcs only move when the sun changes.
-        */
+
 
 
     }
