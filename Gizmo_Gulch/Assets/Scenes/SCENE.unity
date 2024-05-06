@@ -6398,6 +6398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCsParent
       objectReference: {fileID: 0}
+    - target: {fileID: 4755700756801456836, guid: 01b1d134f3ed58242b5ff8ce0817bfcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7933227838444465102, guid: 01b1d134f3ed58242b5ff8ce0817bfcf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8912,7 +8917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 7
+  itemId: 670
   indentLevel: 0
   storyText: hello im a home get in me!
   description: 
@@ -8939,7 +8944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 6
+  itemId: 669
   indentLevel: 0
   storyText: hello i am house md
   description: 
@@ -8974,7 +8979,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 5
+  itemId: 642
   blockName: House2
   description: 
   eventHandler: {fileID: 0}
@@ -9001,7 +9006,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 4
+  itemId: 641
   blockName: House1
   description: 
   eventHandler: {fileID: 0}
@@ -9052,7 +9057,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 17
+  itemId: 644
   blockName: New Block
   description: 
   eventHandler: {fileID: 0}
@@ -9078,7 +9083,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 13
+  itemId: 643
   blockName: What did you see?
   description: 
   eventHandler: {fileID: 0}
@@ -9130,7 +9135,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 24
+  itemId: 646
   blockName: Menu
   description: 
   eventHandler: {fileID: 0}
@@ -9154,7 +9159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 31
+  itemId: 673
   indentLevel: 0
   text: Where did it occur?
   description: 
@@ -9187,7 +9192,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 19
+  itemId: 645
   blockName: Where did it occur?
   description: 
   eventHandler: {fileID: 0}
@@ -9210,7 +9215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 38
+  itemId: 680
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067128}
@@ -9231,7 +9236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 36
+  itemId: 678
   indentLevel: 0
   storyText: Sounded like it came from that there house, yonder.
   description: 
@@ -9258,7 +9263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 29
+  itemId: 672
   indentLevel: 0
   text: What did you see? {$checkText}
   description: 
@@ -9283,7 +9288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 37
+  itemId: 679
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067128}
@@ -9304,7 +9309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 34
+  itemId: 676
   indentLevel: 0
   storyText: "Well, here\u2019s the thing. I didn\u2019t see it persay. I heard what
     sounded like a scream.\u201D "
@@ -9332,7 +9337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 28
+  itemId: 671
   indentLevel: 0
   text: A Crime?!
   description: 
@@ -9365,7 +9370,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 30
+  itemId: 647
   blockName: A Crime?!
   description: 
   eventHandler: {fileID: 0}
@@ -9388,7 +9393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 35
+  itemId: 677
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067128}
@@ -9409,7 +9414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 33
+  itemId: 675
   indentLevel: 0
   storyText: You know, of the criminal variety.
   description: 
@@ -9436,7 +9441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 32
+  itemId: 674
   indentLevel: 0
   storyText: Yeah.
   description: 
@@ -9463,7 +9468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 43
+  itemId: 683
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: ResumeTime
@@ -9480,7 +9485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 42
+  itemId: 682
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: ResumeTime
@@ -9497,7 +9502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 41
+  itemId: 681
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: ResumeTime
@@ -9514,7 +9519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 46
+  itemId: 686
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: IncrementTick
@@ -9531,7 +9536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 45
+  itemId: 685
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: IncrementTick
@@ -9548,7 +9553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 44
+  itemId: 684
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: IncrementTick
@@ -9573,7 +9578,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 55
+  itemId: 648
   blockName: Leave
   description: 
   eventHandler: {fileID: 0}
@@ -9596,7 +9601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 56
+  itemId: 687
   indentLevel: 0
   text: Leave
   description: 
@@ -9621,7 +9626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 57
+  itemId: 688
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: LockCursor
@@ -9638,7 +9643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 58
+  itemId: 689
   indentLevel: 0
   storyText: see you sheriff ;) <=3
   description: 
@@ -9665,7 +9670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 60
+  itemId: 690
   indentLevel: 0
   anyVar:
     variable: {fileID: 0}
@@ -9817,7 +9822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 63
+  itemId: 691
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: DCTest
@@ -9864,7 +9869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 150
+  itemId: 692
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: AuthorityPreCheck
@@ -9881,7 +9886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 67
+  itemId: 693
   indentLevel: 0
   anyVar:
     variable: {fileID: 609067168}
@@ -10056,7 +10061,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 76
+  itemId: 651
   blockName: FAIL
   description: FAIL
   eventHandler: {fileID: 0}
@@ -10076,7 +10081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 80
+  itemId: 703
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067128}
@@ -10105,7 +10110,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 68
+  itemId: 649
   blockName: CHECK
   description: 
   eventHandler: {fileID: 0}
@@ -10133,7 +10138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 81
+  itemId: 704
   indentLevel: 2
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067173}
@@ -10154,7 +10159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 69
+  itemId: 694
   indentLevel: 2
   soundClip: {fileID: 8300000, guid: 893178be52ca3ed46b818c71b8dc0a8b, type: 3}
   volume: 1
@@ -10171,7 +10176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 73
+  itemId: 698
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -10414,7 +10419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 151
+  itemId: 699
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067180}
@@ -10443,7 +10448,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 75
+  itemId: 650
   blockName: SUCCESS
   description: SUCESS
   eventHandler: {fileID: 0}
@@ -10463,7 +10468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 79
+  itemId: 702
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067128}
@@ -10484,7 +10489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 78
+  itemId: 701
   indentLevel: 0
   storyText: YOU SUCCEEDED
   description: 
@@ -10511,7 +10516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 71
+  itemId: 696
   indentLevel: 1
   soundClip: {fileID: 8300000, guid: 1dc391211d3ddb14896946bf4b5754dd, type: 3}
   volume: 1
@@ -10528,7 +10533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 70
+  itemId: 695
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -10771,7 +10776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 72
+  itemId: 697
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: c78c66fc2d10bf643ba54f8debe26f51, type: 3}
   volume: 1
@@ -10788,7 +10793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 77
+  itemId: 700
   indentLevel: 0
   storyText: YOU FAILED
   description: 
@@ -10815,7 +10820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 82
+  itemId: 705
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: DCTest
@@ -10840,7 +10845,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 101
+  itemId: 659
   blockName: Ya know how it is out here sheriff. (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -10865,7 +10870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 128
+  itemId: 742
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 0}
@@ -10886,7 +10891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 127
+  itemId: 741
   indentLevel: 0
   storyText: So sometimes I feel like I gotta let the world know I'm here.
   description: 
@@ -10913,7 +10918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 126
+  itemId: 740
   indentLevel: 0
   storyText: It gets lonely, I gots nobody to talk to. And when ya stare long enough
     into the abyss,  it stares back.
@@ -10941,7 +10946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 125
+  itemId: 739
   indentLevel: 0
   storyText: "and the great expanse\u2026"
   description: 
@@ -10968,7 +10973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 124
+  itemId: 738
   indentLevel: 0
   storyText: 'me, '
   description: 
@@ -10995,7 +11000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 123
+  itemId: 737
   indentLevel: 0
   storyText: "Just the houses, \r"
   description: 
@@ -11022,7 +11027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 122
+  itemId: 736
   indentLevel: 0
   storyText: Ya know how it is out here sheriff.
   description: 
@@ -11049,7 +11054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 144
+  itemId: 755
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067211}
@@ -11070,7 +11075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 143
+  itemId: 754
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067247}
@@ -11091,7 +11096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 142
+  itemId: 753
   indentLevel: 0
   storyText: YOU FAILED
   description: 
@@ -11118,7 +11123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 140
+  itemId: 752
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067250}
@@ -11139,7 +11144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 139
+  itemId: 751
   indentLevel: 0
   storyText: YOU SUCCEEDED
   description: 
@@ -11166,7 +11171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 137
+  itemId: 750
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067248}
@@ -11187,7 +11192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 136
+  itemId: 749
   indentLevel: 1
   soundClip: {fileID: 8300000, guid: 893178be52ca3ed46b818c71b8dc0a8b, type: 3}
   volume: 1
@@ -11204,7 +11209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 135
+  itemId: 748
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -11447,7 +11452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 134
+  itemId: 747
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067249}
@@ -11468,7 +11473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 133
+  itemId: 746
   indentLevel: 1
   soundClip: {fileID: 8300000, guid: 1dc391211d3ddb14896946bf4b5754dd, type: 3}
   volume: 1
@@ -11485,7 +11490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 132
+  itemId: 745
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -11728,7 +11733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 131
+  itemId: 744
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: DCTest
@@ -11745,7 +11750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 130
+  itemId: 743
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: c78c66fc2d10bf643ba54f8debe26f51, type: 3}
   volume: 1
@@ -11770,7 +11775,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 147
+  itemId: 660
   blockName: CHECK (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -11796,7 +11801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 120
+  itemId: 735
   indentLevel: 0
   storyText: Back to the void...
   description: 
@@ -11823,7 +11828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 119
+  itemId: 734
   indentLevel: 0
   storyText: 'So long sheriff. '
   description: 
@@ -11850,7 +11855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 118
+  itemId: 733
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: LockCursor
@@ -11867,7 +11872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 116
+  itemId: 732
   indentLevel: 0
   targetObject: {fileID: 0}
   methodName: ResumeTime
@@ -11884,7 +11889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 115
+  itemId: 731
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 0}
@@ -11905,7 +11910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 114
+  itemId: 730
   indentLevel: 0
   storyText: " I\u2019m just yelling just cause I like to and that\u2019s that!\r"
   description: 
@@ -11932,7 +11937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 113
+  itemId: 729
   indentLevel: 0
   storyText: "{vpunch=10,0.5}But I didn\u2019t touch em!"
   description: 
@@ -11959,7 +11964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 112
+  itemId: 728
   indentLevel: 0
   storyText: 'Well, there are the houses. '
   description: 
@@ -11986,7 +11991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 111
+  itemId: 727
   indentLevel: 0
   storyText: "Besides, there\u2019s no one I could have hurt! Other than the three
     of us there are no other people in this Unity\u2122 scene!"
@@ -12014,7 +12019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 110
+  itemId: 726
   indentLevel: 0
   storyText: "When I yell, I feel alive!\r"
   description: 
@@ -12041,7 +12046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 109
+  itemId: 725
   indentLevel: 0
   storyText: Ya caught me red handed. I just like to hoop and holler.
   description: 
@@ -12068,7 +12073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 108
+  itemId: 724
   indentLevel: 0
   storyText: "Ok, fine.\r"
   description: 
@@ -12095,7 +12100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 107
+  itemId: 723
   indentLevel: 0
   targetObject: {fileID: 0}
   methodName: IncrimentTime
@@ -12112,7 +12117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 105
+  itemId: 722
   indentLevel: 0
   text: Leave
   description: 
@@ -12137,7 +12142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 104
+  itemId: 721
   indentLevel: 0
   text: How are you?
   description: 
@@ -12162,7 +12167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 154
+  itemId: 719
   indentLevel: 0
   storyText: "Hmmm. Maybe if somebody with better Rizz asked me, I would tell them
     what it is that I defintley don\u2019t know."
@@ -12190,7 +12195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 100
+  itemId: 718
   indentLevel: 0
   storyText: "{vpunch=10,1}I don\u2019t know nothing about no crimes! \r"
   description: 
@@ -12217,7 +12222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 98
+  itemId: 717
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: ResumeTime
@@ -12234,7 +12239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 97
+  itemId: 716
   indentLevel: 0
   targetFlowchart: {fileID: 609067121}
   targetBlock: {fileID: 609067246}
@@ -12255,7 +12260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 96
+  itemId: 715
   indentLevel: 0
   storyText: "Sheriff, your Rizz is off the charts! I\u2019ll tell you anything you
     want to know! "
@@ -12283,7 +12288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 95
+  itemId: 714
   indentLevel: 0
   storyText: 'Woah, wait... '
   description: 
@@ -12310,7 +12315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 153
+  itemId: 713
   indentLevel: 0
   storyText: " I don\u2019t know nothing about that\u2026 "
   description: 
@@ -12337,7 +12342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 92
+  itemId: 712
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: IncrimentTime
@@ -12354,7 +12359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 90
+  itemId: 711
   indentLevel: 0
   text: I have good intel  there's been a crime here. What do you know? {$checkText}
   description: 
@@ -12387,7 +12392,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 66
+  itemId: 653
   blockName: Menu1 (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -12408,7 +12413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 88
+  itemId: 710
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067236}
@@ -12429,7 +12434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 87
+  itemId: 709
   indentLevel: 0
   storyText: What brings ya to these parts sheriff?
   description: 
@@ -12456,7 +12461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 152
+  itemId: 708
   indentLevel: 0
   sayDialog: {fileID: 2086562745}
 --- !u!114 &609067240
@@ -12471,7 +12476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 85
+  itemId: 707
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: PauseTime
@@ -12488,7 +12493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 84
+  itemId: 706
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: UnlockCursor
@@ -12513,7 +12518,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 64
+  itemId: 652
   blockName: What brings ya to these parts sheriff? (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -12536,7 +12541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 103
+  itemId: 720
   indentLevel: 0
   text: You have anything to do with a scream?
   description: 
@@ -12569,7 +12574,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 94
+  itemId: 658
   blockName: Leave2 (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -12598,7 +12603,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 86
+  itemId: 657
   blockName: Ok, fine. (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -12634,7 +12639,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 146
+  itemId: 656
   blockName: Menu2 (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -12663,7 +12668,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 74
+  itemId: 655
   blockName: "I don\u2019t know nothing (Copy)"
   description: 
   eventHandler: {fileID: 0}
@@ -12691,7 +12696,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 149
+  itemId: 662
   blockName: FAIL (Copy)
   description: FAIL
   eventHandler: {fileID: 0}
@@ -12719,7 +12724,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 148
+  itemId: 661
   blockName: SUCCESS (Copy)
   description: SUCESS
   eventHandler: {fileID: 0}
@@ -12747,7 +12752,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 145
+  itemId: 654
   blockName: What?! A-a-a-a crime? (Copy)
   description: 
   eventHandler: {fileID: 0}
@@ -12771,7 +12776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 155
+  itemId: 756
   indentLevel: 0
   anyVar:
     variable: {fileID: 609067168}
@@ -12950,7 +12955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 190
+  itemId: 771
   indentLevel: 0
   sayDialog: {fileID: 2086562745}
 --- !u!114 &609067256
@@ -12965,7 +12970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 189
+  itemId: 770
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: PauseTime
@@ -12982,7 +12987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 188
+  itemId: 769
   indentLevel: 0
   targetObject: {fileID: 1339778963}
   methodName: UnlockCursor
@@ -12999,7 +13004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 187
+  itemId: 768
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067272}
@@ -13020,7 +13025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 186
+  itemId: 767
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067252}
@@ -13041,7 +13046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 185
+  itemId: 766
   indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067271}
@@ -13062,7 +13067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 184
+  itemId: 765
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -13305,7 +13310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 183
+  itemId: 764
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -13548,7 +13553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 182
+  itemId: 763
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -13791,7 +13796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 181
+  itemId: 762
   indentLevel: 1
   anyOrAllConditions: 0
   conditions:
@@ -14034,7 +14039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 180
+  itemId: 761
   indentLevel: 1
   anyOrAllConditions: 0
   conditions:
@@ -14279,13 +14284,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 189.39601
-    y: 32.406822
+    x: 190.82458
+    y: 19.549675
     width: 106.56
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 174
+  itemId: 665
   blockName: fellaStart
   description: 
   eventHandler: {fileID: 0}
@@ -14313,7 +14318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 172
+  itemId: 760
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067128}
@@ -14334,7 +14339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 169
+  itemId: 759
   indentLevel: 0
   storyText: "Good evening Sheriff! You\u2019re just the man I wanted to talk to. "
   description: 
@@ -14361,7 +14366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 163
+  itemId: 758
   indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 609067128}
@@ -14382,7 +14387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 160
+  itemId: 757
   indentLevel: 0
   storyText: "Good morning Sheriff! You\u2019re just the man I wanted to talk to. "
   description: 
@@ -14417,7 +14422,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 177
+  itemId: 663
   blockName: GOODMORNING
   description: 
   eventHandler: {fileID: 0}
@@ -14445,7 +14450,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 178
+  itemId: 664
   blockName: GOODEVENING
   description: 
   eventHandler: {fileID: 0}
@@ -14465,7 +14470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 191
+  itemId: 772
   indentLevel: 0
   targetObject: {fileID: 1424326857}
   methodName: ResumeTime
@@ -14505,7 +14510,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 192
+  itemId: 666
   blockName: New Block1
   description: 
   eventHandler: {fileID: 0}
@@ -14523,7 +14528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 193
+  itemId: 773
   indentLevel: 0
   anyVar:
     variable: {fileID: 609067274}
@@ -14675,7 +14680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 194
+  itemId: 774
   indentLevel: 0
   anyVar:
     variable: {fileID: 609067274}
@@ -14827,7 +14832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 196
+  itemId: 775
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
@@ -15078,7 +15083,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 195
+  itemId: 667
   blockName: New Block2
   description: 
   eventHandler: {fileID: 0}
@@ -15097,7 +15102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 197
+  itemId: 776
   indentLevel: 0
   description: 
   delay: 0
@@ -15168,7 +15173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 199
+  itemId: 777
   indentLevel: 0
   storyText: '{$evidenceDescription}'
   description: 
@@ -15203,7 +15208,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 198
+  itemId: 668
   blockName: EVIDENCE
   description: 
   eventHandler: {fileID: 0}
@@ -33429,6 +33434,466 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205093288}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1225830317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 12352420402512654, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4239.2856
+      objectReference: {fileID: 0}
+    - target: {fileID: 12352420402512654, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -380.13568
+      objectReference: {fileID: 0}
+    - target: {fileID: 98060683766070839, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4283.872
+      objectReference: {fileID: 0}
+    - target: {fileID: 98060683766070839, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -549.07336
+      objectReference: {fileID: 0}
+    - target: {fileID: 362030593324646209, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1225830318}
+    - target: {fileID: 362030593324646209, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: startBlockName
+      value: DITree01
+      objectReference: {fileID: 0}
+    - target: {fileID: 402113740403225515, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4254.6294
+      objectReference: {fileID: 0}
+    - target: {fileID: 402113740403225515, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 626.7362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272930468716651001, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4520.9526
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272930468716651001, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 203.85767
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293772684060529760, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4231.955
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293772684060529760, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -478.54218
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946674434008946209, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4961.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946674434008946209, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -385.19653
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223516388949090676, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1225830318}
+    - target: {fileID: 2223516388949090676, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: startBlockName
+      value: BBTree01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611942088742838566, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4216.6587
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611942088742838566, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 72.9209
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720531304650099639, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 5525.322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720531304650099639, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -230.55954
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854597617342291157, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3681.8408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854597617342291157, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -294.78384
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856057143612730448, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4022.374
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856057143612730448, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 353.58514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949954958645281210, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1225830318}
+    - target: {fileID: 2949954958645281210, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: startBlockName
+      value: HOTree01 (Copy)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960419109587686113, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3703.6018
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960419109587686113, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -420.91922
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992005263406834212, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4339.2627
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992005263406834212, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -247.5615
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246853439353295825, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1225830318}
+    - target: {fileID: 3246853439353295825, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: startBlockName
+      value: MMTree01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493959120579755091, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4891.8364
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493959120579755091, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -69.979706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664265924717651747, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4224.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664265924717651747, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -131.69048
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051214856538019142, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3983.7546
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051214856538019142, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -326.70398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126249734690222998, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3785.9893
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126249734690222998, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 506.26416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567744570515179162, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 5211.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567744570515179162, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -77.93892
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920605702261605266, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 5159.905
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920605702261605266, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -222.76282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247286486937365368, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4203.821
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247286486937365368, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 191.75885
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299978259901940707, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4200.968
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299978259901940707, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 558.23456
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508708644246795240, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_Name
+      value: ParentedFlowchartsCharactersSayDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648195144334802771, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4618.8535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648195144334802771, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -213.61078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529963349740137192, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1225830318}
+    - target: {fileID: 6529963349740137192, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: startBlockName
+      value: FPTree01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687217431257507157, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1225830318}
+    - target: {fileID: 6687217431257507157, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: startBlockName
+      value: GGTree01 (Copy)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695336541272046930, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4247.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695336541272046930, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 280.60876
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766570112104339565, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 5373.5986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766570112104339565, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -309.8698
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162941390121784059, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4251.3936
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162941390121784059, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 479.27856
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172384591179378920, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4572.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172384591179378920, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -127.40427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767822001878389796, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140722410032609386, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3755.1023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140722410032609386, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -501.76163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167226578529661782, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4519.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167226578529661782, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 480.48322
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561106621149780072, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4902.7324
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561106621149780072, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -140.25555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941330967100315884, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4482.732
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941330967100315884, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 372.7494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972127480565937307, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 4909.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972127480565937307, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -315.34076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983072217070087885, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3427.2007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983072217070087885, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: -336.62253
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bf2a99787f8e4584db1dede16885be2f, type: 3}
+--- !u!114 &1225830318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1225830317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226787914
 GameObject:
   m_ObjectHideFlags: 0
@@ -35923,7 +36388,7 @@ MonoBehaviour:
   tickRate: 1
   nextTick: 0
   timePassing: 1
-  flowchart: {fileID: 609067121}
+  flowchart: {fileID: 1225830318}
   camera: {fileID: 79078697}
 --- !u!43 &1427677395
 Mesh:
@@ -37751,6 +38216,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141897308135263132, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 215100694677412001, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 815168412875672679, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 954276480338123502, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: m_Name
@@ -37759,12 +38239,27 @@ PrefabInstance:
     - target: {fileID: 954276480338123502, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1837071645713466711, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: extendPrevious
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492700218294556886, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715775509717503758, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796699235842119690, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3037320930424798618, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
@@ -37816,6 +38311,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3242823265167950275, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454786137710189412, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4585791261555464020, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: fadeWhenDone
@@ -37825,6 +38330,16 @@ PrefabInstance:
         type: 3}
       propertyPath: extendPrevious
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797347094238900085, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891976242506758622, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: anyVar.variable
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5277747461205501881, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
@@ -37941,10 +38456,25 @@ PrefabInstance:
       propertyPath: 'selectedCommands.Array.data[2]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5820160479064769341, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902821761898000391, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6627676556827426541, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
       propertyPath: storyText
       value: "Good afternoon Sheriff! You\u2019re just the man I wanted to talk to. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7678293969336691580, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123567917092794010, guid: 79acfd169bcffcb4f8604dd008e50154,
         type: 3}
@@ -38016,10 +38546,22 @@ PrefabInstance:
       propertyPath: 'commandList.Array.data[7]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8271763835989069844, guid: 79acfd169bcffcb4f8604dd008e50154,
+        type: 3}
+      propertyPath: conditions.Array.data[0].anyVar.variable
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6668799299523724262, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
     - {fileID: 4585791261555464020, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
     - {fileID: 1837071645713466711, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 2490534234232096545, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 8753944775380444414, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 688102762353535028, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 1111861702535095295, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 3035314824468351051, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 3098004700910910002, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
+    - {fileID: 7594081768122083025, guid: 79acfd169bcffcb4f8604dd008e50154, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -42027,7 +42569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1785682451
 Transform:
   m_ObjectHideFlags: 0
@@ -44412,6 +44954,12 @@ MonoBehaviour:
   flowchart: {fileID: 609067121}
   startBlockName: fellaStart
   player: {fileID: 0}
+--- !u!1 &1923028466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4945270302579604276, guid: 737996e2e84532c4b8160ae5934b3df7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2701917484932154020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1957230239
 GameObject:
   m_ObjectHideFlags: 0
@@ -46732,22 +47280,22 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 621639932441185457, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 883203495185269594, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 1331648301652429934, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 1722687513012978505, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: m_Name
@@ -46757,12 +47305,12 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 2341564425191345902, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 2602400903289580176, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -46867,37 +47415,37 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 3980164200505046145, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 5189872322104738335, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 5938785937506201105, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 5983310287559555946, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 6078573756449808242, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 6215295481807053851, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 6277824232172582382, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
@@ -46907,7 +47455,7 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 6371043918634895065, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
@@ -46915,14 +47463,19 @@ PrefabInstance:
       objectReference: {fileID: 609067121}
     - target: {fileID: 6801681196698299589, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
+      propertyPath: preReq
+      value: 
+      objectReference: {fileID: 1923028466}
+    - target: {fileID: 6801681196698299589, guid: 737996e2e84532c4b8160ae5934b3df7,
+        type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 6972288531674313296, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 7407926996522923112, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: nightPreReq3
@@ -46932,17 +47485,17 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 8091079260925071923, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 8229052663687486236, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 8564176685553924089, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -46962,12 +47515,12 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     - target: {fileID: 8786769765095674515, guid: 737996e2e84532c4b8160ae5934b3df7,
         type: 3}
       propertyPath: flowchart
       value: 
-      objectReference: {fileID: 609067121}
+      objectReference: {fileID: 1225830318}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46999,3 +47552,4 @@ SceneRoots:
   - {fileID: 81863537}
   - {fileID: 1865556510}
   - {fileID: 426059388}
+  - {fileID: 1225830317}
