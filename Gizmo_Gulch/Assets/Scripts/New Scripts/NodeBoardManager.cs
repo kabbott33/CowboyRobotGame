@@ -17,6 +17,8 @@ public class NodeBoardManager : MonoBehaviour
     public void AddNode(string nodeIdentifier) 
     {
         activeNodes.Add(nodeIdentifier);
+        InferenceManager.instance.InferenceCheck();
+        Debug.Log("Added node" + (nodeIdentifier));
     }
 
     // Update is called once per frame

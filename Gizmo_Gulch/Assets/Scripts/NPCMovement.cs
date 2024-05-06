@@ -67,7 +67,7 @@ public class NPCMovement : MonoBehaviour
     void Update()
     {
   
-        if (!agent.pathPending && agent.remainingDistance < 0.1f)
+        if ((!agent.pathPending && agent.remainingDistance < 0.1f)&&!canTalk)
         {
             NPC.transform.rotation = currentPosition.rotation;
             canTalk=true;
