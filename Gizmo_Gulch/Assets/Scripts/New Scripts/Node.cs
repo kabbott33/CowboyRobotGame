@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Fungus;
+using TMPro;
 
 public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler
 {
     public string identifier;   
     public GameObject preReq;
+
+
     public bool noPreReq;
 
     //public Image image;
@@ -20,26 +23,55 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     public Transform parentAfterDrag;
 
     public GameObject location;
+    public GameObject altLocation;
 
-    public GameObject linePrefab;
+   // public GameObject linePrefab;
+
+    public GameObject line;
+
+    public bool isInference;
+    public bool isEvidence;
+
+    public GameObject altEvidence1;
+    public GameObject altEvidence2;
 
     
+
+    public bool defaultNode;
+
+    public TextMeshProUGUI text;
+    
+
+    public bool isLockedIn;
+
+    public GameObject board;
     void Start()
     {
         identifier = this.gameObject.name;
         evidence =this.GetComponent<Image>();
 
+        if (defaultNode || isInference)
+        {
+            goToPosition();
+        }
+
+
+        text.raycastTarget = false;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!(isInBoard))
+        if (!(isInBoard)&&!(isLockedIn))
         {
-            Debug.Log("Start Drag");
-            parentAfterDrag = transform.parent;
-            transform.SetParent(transform.root);
-            transform.SetAsLastSibling();
-            evidence.raycastTarget = false;
+            if (isEvidence) 
+            {
+                Debug.Log("Start Drag");
+                //parentAfterDrag = transform.parent;
+                transform.SetParent(transform.root);
+                transform.SetAsLastSibling();
+                evidence.raycastTarget = false;
+            }
+
         }
 
 
@@ -47,16 +79,33 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Dragin");
-        transform.position = Input.mousePosition;
+        //if (!isInBoard)
+
+        if (!(isLockedIn)) 
+        {
+            if (evidence)
+            {
+                Debug.Log("Dragin");
+                transform.position = Input.mousePosition;
+            }
+
+        }
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End Drag");
-        transform.SetParent(parentAfterDrag);
-        evidence.raycastTarget = true;
+        if (!(isLockedIn))
+        {
+            Debug.Log("End Drag");
 
+           
+        }
+        evidence.raycastTarget = true;
+        transform.SetParent(board.transform);
+        transform.SetAsLastSibling();
+
+        CheckFloatingNodes();
 
        // goToPosition();
         //DropIntoBoard();
@@ -72,11 +121,12 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyUp(KeyCode.Mouse0)) 
         {
             goToPosition();
         }
-
+        */
         /*
         if ((NodeBoardManager.instance.activeNodes.Contains(preReq))&&isInBoard)
         {
@@ -85,32 +135,93 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         */
     }
 
+    public void InTheBoard()
+    {
+        isInBoard = true;
+    }
+
     public void goToPosition()
     {
-        if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) && isInBoard)
+        if (isEvidence)
         {
-            Debug.Log("googoogaga");
-            this.transform.position = location.transform.position;
-            NodeBoardManager.instance.AddNode(identifier);
-            DrawLine();
+            if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) && isInBoard)
+           // if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) )
+            {
+                Debug.Log("Evidence Placed");
+
+
+
+                      if ((NodeBoardManager.instance.activeNodes.Contains(altEvidence1.name)) || (NodeBoardManager.instance.activeNodes.Contains(altEvidence2.name)))
+                       {
+                            this.transform.position = altLocation.transform.position;
+                            
+                    isLockedIn = true;
+
+                    if (!NodeBoardManager.instance.activeNodes.Contains(identifier))
+                            {
+                        NodeBoardManager.instance.AddNode(identifier);
+
+                    }
+                    //line.SetActive(true);
+                       }
+
+
+                else
+                {
+                    this.transform.position = location.transform.position;
+                    NodeBoardManager.instance.AddNode(identifier);
+                    isLockedIn = true;
+                    if (!NodeBoardManager.instance.activeNodes.Contains(identifier))
+                        
+                    {
+                        NodeBoardManager.instance.AddNode(identifier);
+
+                    }
+
+                    //line.SetActive(true);
+                }
+
+
+                //DrawLine();
+            }
+        }
+        else if (isInference || defaultNode) 
+        {
+            if (!(NodeBoardManager.instance.activeNodes.Contains (identifier))) 
+            {
+                this.transform.position = location.transform.position;
+                NodeBoardManager.instance.AddNode(identifier);
+                isInBoard = true;
+                isLockedIn = true;
+            }
+
+            //if ((NodeBoardManager.instance.activeNodes.Contains(preReq.name))|| (NodeBoardManager.instance.activeNodes.Contains(preReq2.name)))
+
         }
 
-        /*
-        if ((Vector2.Distance(this.transform.position, location.transform.position)) > 0.01f)
-        {
 
-        }
-        */
+
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            flowchart.SetStringVariable("evidenceDescription", description);
+            flowchart.ExecuteBlock("EVIDENCE");
+        }
 
 
-        flowchart.SetStringVariable("evidenceDescription",description);
-        flowchart.ExecuteBlock("EVIDENCE");
     }
 
+    public void CheckFloatingNodes()
+    {
+        if ((isInBoard) && (!isLockedIn))
+        {
+            goToPosition();
+        }
+    }
 
 
     /*
@@ -124,6 +235,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     }
     */
 
+    /*
     public void DrawLine()    
     {
         GameObject line = Instantiate(linePrefab, this.transform.position, this.transform.rotation);    
@@ -133,4 +245,5 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
           
     }
+    */
 }
