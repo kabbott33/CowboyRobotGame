@@ -2,7 +2,9 @@ using Fungus;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class SkillCheck : MonoBehaviour
@@ -13,11 +15,12 @@ public class SkillCheck : MonoBehaviour
     public float dastardlyDC;
 
     public Flowchart flowchart;
-    public List<SkillCheck> fungusVariables;
+    //public List<SkillCheck> fungusVariables;
 
     public float percentage;
 
-    public 
+    public TextMeshProUGUI authorityNumber;
+    public TextMeshProUGUI mechanicsNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,18 @@ public class SkillCheck : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddMechanics()
+    {
+        mechanics++;
+        mechanicsNumber.text = ("Mechanics = "+(mechanics));
+    }
+
+    public void AddAuthority()
+    {
+        rizz++;
+       authorityNumber.text = ("Authority = " + (rizz));
     }
 
     public void MechanicsCheck()
@@ -64,7 +79,7 @@ public class SkillCheck : MonoBehaviour
         Debug.Log(dastardlyDC);
         percentage = ((emergence / dastardlyDC) * 100);
 
-        flowchart.SetStringVariable("checkText", ("Emergence Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+        flowchart.SetStringVariable("checkText", ("Emergence Check:" + emergence + "/" + dastardlyDC + "| (" + percentage + "%)"));
     }
 
     public void AuthorityPreCheck()
@@ -82,7 +97,7 @@ public class SkillCheck : MonoBehaviour
         Debug.Log(dastardlyDC);
         percentage = ((mechanics / dastardlyDC) * 100);
 
-        flowchart.SetStringVariable("checkText", ("Mechanics Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+        flowchart.SetStringVariable("checkText", ("Mechanics Check:" + mechanics + "/" + dastardlyDC + "| (" + percentage + "%)"));
     }
 
     public void DCTest()

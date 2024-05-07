@@ -32,6 +32,11 @@ public class NpcRaycast : MonoBehaviour
                         hit.transform.GetComponent<NPCDialogue>().StartDialogue();
                         Debug.Log("working");
                     }
+                if (hit.collider.CompareTag("SCENE"))
+                {
+                    hit.transform.GetComponent<EnvironmentDialogue>().StartDialogue();
+                    Debug.Log("working");
+                }
                 {
 
                 }
