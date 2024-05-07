@@ -11,6 +11,8 @@ public class Clock : MonoBehaviour
     public float tickInterval = 1f; // Interval between ticks in seconds
     private float ticks = 0; // Number of ticks
     public GameObject clockHand;
+    public GameObject blackScreen;
+    public GameObject clockUi;
     public TextMeshProUGUI tickTimer;
 
     public float tickRate = 1f;
@@ -23,14 +25,29 @@ public class Clock : MonoBehaviour
 
     public GameObject camera;
 
+    //timer+text mesh variables
+    public TMP_Text timerText;
+    public TMP_Text warningText;
+    public TMP_Text warning2Text;
+    public TMP_Text phaseOfDayText;
+    public AudioClip warningSound;
 
+    public int totalTimeInSeconds = 30;
+    private bool isTimerRunning = false;
+    private bool warningActive = false;
+    private bool playerDidMakeIt = false;
+
+    public GameObject Player;
+    public GameObject TPref;
     void Start()
     {
         EventController.instance.pauseTime += PauseTime;
         EventController.instance.resumeTime += ResumeTime;
         // Start the timer
         // InvokeRepeating("IncrementTick", 3, tickInterval);
-      
+        timerText.gameObject.SetActive(false);
+        blackScreen.gameObject.SetActive(false);
+        warningText.gameObject.SetActive(false);
 
 
     }
@@ -46,8 +63,9 @@ public class Clock : MonoBehaviour
         MorningEnd();
         NoonEnd();
         EveningEnd();
+        StartTimer();
         SleepAction();
-        
+
 
 
 
@@ -79,55 +97,55 @@ public class Clock : MonoBehaviour
             EventController.instance.Morning();
             EventController.instance.NPCsToMorning();
             flowchart.SetStringVariable(("phase"), "morning");
+            PhaseDayText();
+
         }
     }
     public void MorningEnd()
     {
-        if (ticks == 24 && timePassing) 
+        if (ticks == 24 && timePassing)
         {
-            Debug.Log("plumpis");
+
             EventController.instance.Noon();
             EventController.instance.NPCsToNoon();
             flowchart.SetStringVariable(("phase"), "noon");
+            PhaseDayText();
+            
         }
     }
     public void NoonEnd()
     {
-        if (ticks == 48&&timePassing)
+        if (ticks == 48 && timePassing)
         {
             EventController.instance.Evening();
             EventController.instance.NPCsToEvening();
             flowchart.SetStringVariable(("phase"), "evening");
+            PhaseDayText();
+
         }
     }
-    
+
     public void EveningEnd()
     {
-        if (ticks == 72&&timePassing)
+        if (ticks == 72 && timePassing)
         {
-           
+
             EventController.instance.Night();
             //EventController.instance.ResetDay();
             EventController.instance.NPCsToNight();
-           clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
+            clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
+            phaseOfDayText.text = " ";
+
             //ticks = -24;
             //EventController.instance.PauseTime();
         }
     }
-    /*
-    public void SleepTime()
-    {
-        if (ticks == 73 && timePassing)
-        {
-            Debug.Log("POOPISS");
-            EventController.instance.PauseTime();
-           
-        }
-    }
-*/
+
+
+
     public void SleepAction()
     {
-        if ((Input.GetKeyDown(KeyCode.F)) && (ticks == 72 ) && (!timePassing))
+        if ((Input.GetKeyDown(KeyCode.F)) && (ticks == 72) && (!timePassing))
         {
             RaycastHit hit;
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, EventController.instance.interactDistance))
@@ -142,24 +160,130 @@ public class Clock : MonoBehaviour
                     //Debug.Log("PISSPOO");
                     EventController.instance.PauseTime();
                     ticks = -10;
-                       EventController.instance.UnlockCursor();
-                        EventController.instance.ResetDay();
-                    
-                       
+                    EventController.instance.UnlockCursor();
+                    EventController.instance.ResetDay();
+                    //DoTweenFadeIN_OUT.instance.FadeIn(5);
+                    StopTimer();
+
 
                 }
-                
 
-               
+
+
             }
         }
     }
-    
-    
+
+    public void StartTimer()
+    {
+        if (ticks == 72 && !timePassing && !isTimerRunning)
+        {
+            StartCoroutine(Timer());
+            // Turn on the timer
+            warningText.gameObject.SetActive(true);
+            timerText.gameObject.SetActive(true);
+            // Start the timer coroutine
+            isTimerRunning = true;
+            clockUi.gameObject.SetActive(false);
+        }
+    }
 
 
+    public void StopTimer()
+    {
+        if (isTimerRunning)
+            // Turn off the timer
+            timerText.gameObject.SetActive(false);
+        warningText.gameObject.SetActive(false);
+        blackScreen.gameObject.SetActive(true);
+        isTimerRunning = false;
+        // Stop the coroutine if it's running
+        StopAllCoroutines();
+        playerDidMakeIt = true;
+    }
 
-public void PauseTime()
+    public void TogleBlackScreen()
+    {
+        blackScreen.gameObject.SetActive(false);
+    }
+
+    public void HiShree()
+    { 
+            blackScreen.gameObject.SetActive(true);
+            TeleportPlayer();
+    }
+
+    public void TeleportPlayer()
+    { 
+        Player.transform.rotation = TPref.transform.rotation;
+        Player.transform.position = TPref.transform.position;
+    }
+
+    private IEnumerator Timer()
+    {
+        float timeRemaining = totalTimeInSeconds;
+
+        while (timeRemaining > 0)
+        {
+            int minutes = Mathf.FloorToInt(timeRemaining / 60);
+            int seconds = Mathf.FloorToInt(timeRemaining % 60);
+            int milliseconds = Mathf.FloorToInt((timeRemaining - Mathf.Floor(timeRemaining)) * 1000);
+
+            timerText.text = string.Format("{0:00}:{1:00}.{2:000}", minutes, seconds, milliseconds);
+
+            // Check if it's time to activate the warning
+            if (timeRemaining <= 30 && !warningActive)
+            {
+                warningActive = true;
+                StartCoroutine(ActivateWarning());
+            }
+
+            yield return new WaitForSeconds(0.01f); // Update every 0.01 seconds
+            timeRemaining -= 0.01f;
+        }
+
+        timerText.text = "00:00.000";
+        if (timeRemaining < 0.1)
+        {
+            HiShree();
+            StopTimer();
+            EventController.instance.UnlockCursor();
+            EventController.instance.ResetDay();
+            EventController.instance.PauseTime();
+            ticks = -10;
+        }
+        // Optionally, you can do something when the timer reaches 0
+    }
+
+    private IEnumerator ActivateWarning()
+    {
+        while (true)
+        {
+            warningText.gameObject.SetActive(true);
+
+            // Play warning sound if provided
+            if (warningSound != null)
+            {
+                AudioSource.PlayClipAtPoint(warningSound, transform.position);
+            }
+
+            yield return new WaitForSeconds(1f); // Toggle every half a second
+
+            warningText.gameObject.SetActive(false);
+
+            yield return new WaitForSeconds(1f); // Toggle every half a second
+        }
+    }
+
+
+    public void PhaseDayText()
+    {
+        phaseOfDayText.text = flowchart.GetStringVariable("phase");
+        //phaseOfDayText.text = "phase";
+    }
+
+
+    public void PauseTime()
     {
         timePassing = false;
     }
@@ -171,6 +295,11 @@ public void PauseTime()
             timePassing = true;
         }
 
+    }
+
+    public void TurnTheClockUION()
+    {
+        clockUi.gameObject.SetActive(true);
     }
 
     public void IncrementTick()
