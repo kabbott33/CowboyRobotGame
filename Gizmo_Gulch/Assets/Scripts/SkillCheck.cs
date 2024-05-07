@@ -21,6 +21,7 @@ public class SkillCheck : MonoBehaviour
 
     public TextMeshProUGUI authorityNumber;
     public TextMeshProUGUI mechanicsNumber;
+    public TextMeshProUGUI availablePointsNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,19 +31,31 @@ public class SkillCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        availablePointsNumber.text = ("Available Points = " + (ExperienceManager.instance.availablePoints));
     }
 
     public void AddMechanics()
     {
-        mechanics++;
-        mechanicsNumber.text = ("Mechanics = "+(mechanics));
+        if (ExperienceManager.instance.availablePoints > 0)
+        {
+            mechanics++;
+            mechanicsNumber.text = ("Mechanics = " + (mechanics));
+            ExperienceManager.instance.ReduceAvailablePoints();
+        }
+
+       
     }
 
     public void AddAuthority()
     {
-        rizz++;
-       authorityNumber.text = ("Authority = " + (rizz));
+        if (ExperienceManager.instance.availablePoints > 0)
+        {
+            rizz++;
+            authorityNumber.text = ("Authority = " + (rizz));
+            ExperienceManager.instance.ReduceAvailablePoints();
+        }
+
+       
     }
 
     public void MechanicsCheck()
