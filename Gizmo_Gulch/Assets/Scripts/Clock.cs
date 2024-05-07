@@ -12,6 +12,7 @@ public class Clock : MonoBehaviour
     private float ticks = 0; // Number of ticks
     public GameObject clockHand;
     public GameObject blackScreen;
+    public GameObject startButton;
     public GameObject clockUi;
     public TextMeshProUGUI tickTimer;
 
@@ -48,6 +49,7 @@ public class Clock : MonoBehaviour
         timerText.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(false);
         warningText.gameObject.SetActive(false);
+        startButton.gameObject.SetActive(false);
 
 
     }
@@ -158,6 +160,7 @@ public class Clock : MonoBehaviour
 
                     // EventController.instance.ResumeTime();
                     //Debug.Log("PISSPOO");
+                    HiShree();
                     EventController.instance.PauseTime();
                     ticks = -10;
                     EventController.instance.UnlockCursor();
@@ -196,6 +199,7 @@ public class Clock : MonoBehaviour
             timerText.gameObject.SetActive(false);
         warningText.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(true);
+        startButton.gameObject.SetActive(true);
         isTimerRunning = false;
         // Stop the coroutine if it's running
         StopAllCoroutines();
@@ -204,12 +208,14 @@ public class Clock : MonoBehaviour
 
     public void TogleBlackScreen()
     {
+        startButton.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(false);
     }
 
     public void HiShree()
-    { 
-            blackScreen.gameObject.SetActive(true);
+    {
+        startButton.gameObject.SetActive(true);
+        blackScreen.gameObject.SetActive(true);
             TeleportPlayer();
     }
 
