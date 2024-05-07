@@ -168,7 +168,7 @@ public class Clock : MonoBehaviour
                     //Debug.Log("PISSPOO");
                     HiShree();
                     EventController.instance.PauseTime();
-                    ticks = -10;
+                    ticks = -1;
                     EventController.instance.UnlockCursor();
                     EventController.instance.ResetDay();
                     //DoTweenFadeIN_OUT.instance.FadeIn(5);
@@ -207,6 +207,7 @@ public class Clock : MonoBehaviour
         warningText.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
+        skillStuff.SetActive(true);
         isTimerRunning = false;
         // Stop the coroutine if it's running
         StopAllCoroutines();

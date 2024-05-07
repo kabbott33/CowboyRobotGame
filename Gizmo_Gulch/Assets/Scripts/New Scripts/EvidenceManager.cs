@@ -7,7 +7,7 @@ using UnityEngine;
 public class EvidenceManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public static EvidenceManager instance;
     public Flowchart flowchart;
     public int listCount;
     public List<GameObject> evidenceList;
@@ -18,7 +18,7 @@ public class EvidenceManager : MonoBehaviour
 
     void Start()
     {
-        
+        instance = this;
     }
 
     public void ActivateEvidence()
@@ -26,15 +26,21 @@ public class EvidenceManager : MonoBehaviour
         int nombre = flowchart.GetIntegerVariable("evidenceNumber");
         evidenceList[nombre].SetActive(true);
 
-         if (!NodeBoardManager.instance.activeNodes.Contains((evidenceList[nombre]).name))
+        string name = evidenceList[nombre].name;
+
+         if (!(NodeBoardManager.instance.activeNodes.Contains(name)))
        //if (!((evidenceList[nombre]).activeSelf))
         {
-            AudioSource audio = GetComponent<AudioSource>();
-            audio.Play();
-            newEvidenceNotification.gameObject.SetActive(true);
-            Invoke("DeactivateEvidenceNotification", 2f);
+            ActivateEvidenceNotification();
         }
 
+    }
+    public void ActivateEvidenceNotification()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        newEvidenceNotification.gameObject.SetActive(true);
+        Invoke("DeactivateEvidenceNotification", 2f);
     }
 
     public void DeactivateEvidenceNotification()
