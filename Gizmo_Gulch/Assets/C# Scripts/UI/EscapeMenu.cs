@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour
             {
 
                 pauseMenu.gameObject.SetActive(false);
-            
+
             /*
             if (!(sunMover.isRotating))
             {
@@ -74,11 +74,14 @@ public class PauseMenu : MonoBehaviour
             */
 
 
-            if ((flowchart.GetBooleanVariable("isTalking")) == false)
-                {
-                    EventController.instance.ResumeTime();
-                    EventController.instance.LockCursor();
-                }
+            var sayDialog = Fungus.SayDialog.GetSayDialog();
+            var menu = Fungus.MenuDialog.GetMenuDialog();
+            if ((!sayDialog.isActiveAndEnabled) && (!menu.isActiveAndEnabled))
+            {
+                EventController.instance.ResumeTime();
+                EventController.instance.LockCursor();
+            }
+
             /*
             this.transform.DOScale(Vector3.zero, fadeInTime);
             canvasGroup.DOFade(0f, fadeInTime);

@@ -21,8 +21,13 @@ public class NPCMovement : MonoBehaviour
 
     public bool canTalk = true;
 
+    public bool isGamGam;
+
+    public bool isEnvironment;
+
     void Start()
     {
+        //if (!isEnvironment) return;
         NPC = this.gameObject;
         //EventController.instance.moveNPC += MoveToNextTarget;
 
@@ -38,13 +43,19 @@ public class NPCMovement : MonoBehaviour
 
     public void NPCsToMorning()
     {
-        agent.SetDestination(morningPosition.transform.position);
-        currentPosition = morningPosition.transform;
-        canTalk = false;
+        //if (!isEnvironment) return;
+        if (!isGamGam)
+        {
+            agent.SetDestination(morningPosition.transform.position);
+            currentPosition = morningPosition.transform;
+            canTalk = false;
+        }
+
     }
 
     public void NPCsToNoon()
     {
+        //if (!isEnvironment) return;
         agent.SetDestination(noonPosition.transform.position);
         currentPosition = noonPosition.transform;
         canTalk = false;
@@ -52,6 +63,7 @@ public class NPCMovement : MonoBehaviour
 
     public void NPCsToEvening()
     {
+        //if (!isEnvironment) return;
         agent.SetDestination(eveningPosition.transform.position);
         currentPosition = eveningPosition.transform;
         canTalk = false;
@@ -59,6 +71,7 @@ public class NPCMovement : MonoBehaviour
 
     public void NPCsToNight()
     {
+        //if (!isEnvironment) return;
         agent.SetDestination(nightPosition.transform.position);
         currentPosition = nightPosition.transform;
         canTalk = false;
@@ -66,13 +79,14 @@ public class NPCMovement : MonoBehaviour
 
     void Update()
     {
-  
+        //if (!isEnvironment) return;
         if ((!agent.pathPending && agent.remainingDistance < 0.1f)&&!canTalk)
         {
             NPC.transform.rotation = currentPosition.rotation;
             canTalk=true;
             
         }
+
 
 
 

@@ -68,6 +68,10 @@ public class Clock : MonoBehaviour
         StartTimer();
         SleepAction();
 
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            IncrementTick();
+        }
 
 
 

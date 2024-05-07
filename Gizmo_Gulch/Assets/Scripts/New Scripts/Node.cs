@@ -61,7 +61,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!(isInBoard)&&!(isLockedIn))
+        if (!(isInBoard)&&!((isLockedIn)))
         {
             if (isEvidence) 
             {
@@ -142,62 +142,66 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     public void goToPosition()
     {
-        if (isEvidence)
+        if (!isLockedIn)
         {
-            if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) && isInBoard)
-           // if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) )
+            if (isEvidence)
             {
-                Debug.Log("Evidence Placed");
+                if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) && isInBoard)
+                // if (NodeBoardManager.instance.activeNodes.Contains(preReq.name) )
+                {
+                    Debug.Log("Evidence Placed");
 
 
 
-                      if ((NodeBoardManager.instance.activeNodes.Contains(altEvidence1.name)) || (NodeBoardManager.instance.activeNodes.Contains(altEvidence2.name)))
-                       {
-                            this.transform.position = altLocation.transform.position;
-                            
-                    isLockedIn = true;
+                    if ((NodeBoardManager.instance.activeNodes.Contains(altEvidence1.name)) || (NodeBoardManager.instance.activeNodes.Contains(altEvidence2.name)))
+                    {
+                        this.transform.position = altLocation.transform.position;
 
-                    if (!NodeBoardManager.instance.activeNodes.Contains(identifier))
-                            {
-                        NodeBoardManager.instance.AddNode(identifier);
+                        isLockedIn = true;
 
+                        if (!NodeBoardManager.instance.activeNodes.Contains(identifier))
+                        {
+                            NodeBoardManager.instance.AddNode(identifier);
+
+                        }
+                        //line.SetActive(true);
                     }
-                    //line.SetActive(true);
-                       }
 
 
-                else
+                    else
+                    {
+                        this.transform.position = location.transform.position;
+                        NodeBoardManager.instance.AddNode(identifier);
+                        isLockedIn = true;
+                        if (!NodeBoardManager.instance.activeNodes.Contains(identifier))
+
+                        {
+                            NodeBoardManager.instance.AddNode(identifier);
+
+                        }
+
+                        //line.SetActive(true);
+                    }
+
+
+                    //DrawLine();
+                }
+            }
+            else if (isInference || defaultNode)
+            {
+                if (!(NodeBoardManager.instance.activeNodes.Contains(identifier)))
                 {
                     this.transform.position = location.transform.position;
                     NodeBoardManager.instance.AddNode(identifier);
+                    isInBoard = true;
                     isLockedIn = true;
-                    if (!NodeBoardManager.instance.activeNodes.Contains(identifier))
-                        
-                    {
-                        NodeBoardManager.instance.AddNode(identifier);
-
-                    }
-
-                    //line.SetActive(true);
                 }
 
+                //if ((NodeBoardManager.instance.activeNodes.Contains(preReq.name))|| (NodeBoardManager.instance.activeNodes.Contains(preReq2.name)))
 
-                //DrawLine();
             }
         }
-        else if (isInference || defaultNode) 
-        {
-            if (!(NodeBoardManager.instance.activeNodes.Contains (identifier))) 
-            {
-                this.transform.position = location.transform.position;
-                NodeBoardManager.instance.AddNode(identifier);
-                isInBoard = true;
-                isLockedIn = true;
-            }
-
-            //if ((NodeBoardManager.instance.activeNodes.Contains(preReq.name))|| (NodeBoardManager.instance.activeNodes.Contains(preReq2.name)))
-
-        }
+       
 
 
 
