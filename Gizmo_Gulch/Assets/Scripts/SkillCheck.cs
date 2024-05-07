@@ -2,7 +2,9 @@ using Fungus;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class SkillCheck : MonoBehaviour
@@ -17,7 +19,8 @@ public class SkillCheck : MonoBehaviour
 
     public float percentage;
 
-    public 
+    public TextMeshProUGUI authorityNumber;
+    public TextMeshProUGUI mechanicsNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,18 @@ public class SkillCheck : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddMechanics()
+    {
+        mechanics++;
+        mechanicsNumber.text = ("Mechanics = "+(mechanics));
+    }
+
+    public void AddAuthority()
+    {
+        rizz++;
+       authorityNumber.text = ("Authority = " + (rizz));
     }
 
     public void MechanicsCheck()
