@@ -48,6 +48,13 @@ public class InferenceManager : MonoBehaviour
     public GameObject timePreReq3;
     public int timeConvictionPrereqsMet;
     public GameObject timeNode;
+
+    public GameObject finalConvictionPrereq1;
+    public GameObject finalConvictionPrereq2;
+    public GameObject finalConvictionPrereq3;
+    public int finalConvictionPrereqsmet;
+    public GameObject convictNode;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +74,7 @@ public class InferenceManager : MonoBehaviour
         MeansConviction();
         MotiveConviction();
         TimeConviction();
+        FinalConviction();
     }
 
     /*
@@ -143,6 +151,18 @@ public class InferenceManager : MonoBehaviour
         if (iasj >= 2)
         {
             timeNode.SetActive(true);
+        }
+    }
+
+    public void FinalConviction()
+    {
+        int iasj;
+        iasj = (countPrereqs(finalConvictionPrereq1, finalConvictionPrereq2, finalConvictionPrereq3, NodeBoardManager.instance.activeNodes));
+        finalConvictionPrereqsmet = iasj;
+
+        if (iasj >= 3)
+        {
+            convictNode.SetActive(true);
         }
     }
 

@@ -13,7 +13,7 @@ public class SkillCheck : MonoBehaviour
     public float dastardlyDC;
 
     public Flowchart flowchart;
-    public List<SkillCheck> fungusVariables;
+    //public List<SkillCheck> fungusVariables;
 
     public float percentage;
 
@@ -64,7 +64,7 @@ public class SkillCheck : MonoBehaviour
         Debug.Log(dastardlyDC);
         percentage = ((emergence / dastardlyDC) * 100);
 
-        flowchart.SetStringVariable("checkText", ("Emergence Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+        flowchart.SetStringVariable("checkText", ("Emergence Check:" + emergence + "/" + dastardlyDC + "| (" + percentage + "%)"));
     }
 
     public void AuthorityPreCheck()
@@ -82,7 +82,7 @@ public class SkillCheck : MonoBehaviour
         Debug.Log(dastardlyDC);
         percentage = ((mechanics / dastardlyDC) * 100);
 
-        flowchart.SetStringVariable("checkText", ("Mechanics Check:" + rizz + "/" + dastardlyDC + "| (" + percentage + "%)"));
+        flowchart.SetStringVariable("checkText", ("Mechanics Check:" + mechanics + "/" + dastardlyDC + "| (" + percentage + "%)"));
     }
 
     public void DCTest()
