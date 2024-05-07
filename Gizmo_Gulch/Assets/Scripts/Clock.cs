@@ -304,9 +304,14 @@ public class Clock : MonoBehaviour
 
     public void IncrementTick()
     {
-        if ((ticks != 24)||(ticks!=48)||(ticks!=72))
-            {
-            ticks ++;
+        if (ticks==24||ticks==48||ticks==72)
+        {
+
+        }
+
+        else
+        {
+            ticks++;
             tickTimer.text = "TICK" + ticks;
         }
     }
