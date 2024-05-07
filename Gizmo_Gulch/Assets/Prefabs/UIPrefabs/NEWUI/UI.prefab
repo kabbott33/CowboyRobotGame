@@ -1180,7 +1180,7 @@ MonoBehaviour:
   preReq: {fileID: 4945270302579604276}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: Horatio sold Manny dynamite!
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -1533,7 +1533,8 @@ MonoBehaviour:
   preReq: {fileID: 4330571011445772243}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: Breaking confidentiality, Doc Irving revealed that Manny suffers from
+    insomnia.
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -3762,7 +3763,7 @@ MonoBehaviour:
   preReq: {fileID: 238834814685044871}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: Manny has started to wear spurs.
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -4136,10 +4137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identifier: a3
-  preReq: {fileID: 2716546695584124104}
+  preReq: {fileID: 4945270302579604276}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: Gunpowder was found at Manny's residence.
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -5004,7 +5005,7 @@ MonoBehaviour:
   preReq: {fileID: 7210774603472824816}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: Everyone in town seems to be heavy slepers.
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -5233,7 +5234,7 @@ MonoBehaviour:
   preReq: {fileID: 238834814685044871}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: 'Manny''s residence was covered head to toe in equine paraphernalia. '
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -7908,7 +7909,7 @@ MonoBehaviour:
   preReq: {fileID: 238834814685044871}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: 'Barney revealed that Manny has always wanted to ride a horse. '
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
@@ -10018,7 +10019,7 @@ MonoBehaviour:
   preReq: {fileID: 7210774603472824816}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: There was an explosion, but no one seemed to have heard it.
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}

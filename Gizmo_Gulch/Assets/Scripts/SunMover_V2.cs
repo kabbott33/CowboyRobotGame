@@ -45,14 +45,18 @@ public class SunMover_V2 : MonoBehaviour
     // Method to start rotating towards predawn position
     public void ResetDay()
     {
+       // this.transform.rotation = predawnPosition.rotation;
 
+    
         if (!isRotating)
         {
-            speed = 2000;
-            hoorayThisWillSurelyWorkCorrectly = true;
+            
+            speed = 9000;
+            //hoorayThisWillSurelyWorkCorrectly = true;
             StartCoroutine(RotateTowards(predawnPosition.rotation));
          
         }
+    
     }
 
     // Method to start rotating towards morning position
@@ -95,6 +99,7 @@ public class SunMover_V2 : MonoBehaviour
         if (!isRotating)
         {
             speed = 0.35f;
+            hoorayThisWillSurelyWorkCorrectly=true;
             StartCoroutine(RotateTowards(postDuskPosition.rotation));
           
         }
@@ -125,7 +130,7 @@ public class SunMover_V2 : MonoBehaviour
         // Rotation completed
         EventController.instance.isRotating = false;
 
-        if (!(hoorayThisWillSurelyWorkCorrectly))
+        if (!hoorayThisWillSurelyWorkCorrectly)
         {
             EventController.instance.ResumeTime();
         }

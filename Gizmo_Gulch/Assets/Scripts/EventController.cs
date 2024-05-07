@@ -63,6 +63,8 @@ public class EventController : MonoBehaviour
     public event Action lockCursor;
     public event Action unlockCursor;
 
+    
+
     public void Morning()
     {
         if(morning != null) 
@@ -173,4 +175,6 @@ public class EventController : MonoBehaviour
         }
     }
 
+   
 }
+
