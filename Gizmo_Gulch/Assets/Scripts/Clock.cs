@@ -100,7 +100,7 @@ public class Clock : MonoBehaviour
             EventController.instance.NPCsToMorning();
             flowchart.SetStringVariable(("phase"), "morning");
             PhaseDayText();
-
+            AudioScript.instance.PlayMorningSong();
         }
     }
     public void MorningEnd()
@@ -112,7 +112,7 @@ public class Clock : MonoBehaviour
             EventController.instance.NPCsToNoon();
             flowchart.SetStringVariable(("phase"), "noon");
             PhaseDayText();
-            
+            AudioScript.instance.PlayNoonSong();
         }
     }
     public void NoonEnd()
@@ -123,7 +123,7 @@ public class Clock : MonoBehaviour
             EventController.instance.NPCsToEvening();
             flowchart.SetStringVariable(("phase"), "evening");
             PhaseDayText();
-
+            AudioScript.instance.PlayEveningSong();
         }
     }
 
@@ -188,6 +188,7 @@ public class Clock : MonoBehaviour
             // Start the timer coroutine
             isTimerRunning = true;
             clockUi.gameObject.SetActive(false);
+            AudioScript.instance.PlayAlarmSound();
         }
     }
 
