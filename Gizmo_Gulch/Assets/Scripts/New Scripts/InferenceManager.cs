@@ -160,7 +160,7 @@ public class InferenceManager : MonoBehaviour
         iasj = (countPrereqs(finalConvictionPrereq1, finalConvictionPrereq2, finalConvictionPrereq3, NodeBoardManager.instance.activeNodes));
         finalConvictionPrereqsmet = iasj;
 
-        if (iasj >= 2)
+        if (iasj >= 3)
         {
             convictNode.SetActive(true);
         }

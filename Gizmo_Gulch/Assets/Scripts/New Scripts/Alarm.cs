@@ -10,14 +10,15 @@ public class Alarm : MonoBehaviour
     public Image button;
     public AudioClip alarm;
     public bool canBeep = true;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Image>();
+        button = this.GetComponent<Image>();
         StartCoroutine(BeepBeep());
         StartCoroutine(Blinking());
+        audio = GetComponent<AudioSource>();
 
-        
 
     }
 
@@ -31,7 +32,7 @@ public class Alarm : MonoBehaviour
     {
         if (canBeep)
         {
-            AudioSource audio = GetComponent<AudioSource>();
+            
             audio.Play();
             yield return new WaitForSeconds(audio.clip.length);
             StartCoroutine(BeepBeep());
