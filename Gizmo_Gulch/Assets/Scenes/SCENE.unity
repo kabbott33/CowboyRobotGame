@@ -29988,13 +29988,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 971116657}
+        m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
+        m_MethodName: ShutUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1339778978}
+        m_TargetAssemblyTypeName: EndGame, Assembly-CSharp
+        m_MethodName: EndTheGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30177,9 +30189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081141363e7a61641bc52bf4943d1576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alarm: {fileID: 0}
+  alarm: {fileID: 8300000, guid: 0bd2a8e50d023804080731f959715260, type: 3}
   canBeep: 1
-  audio: {fileID: 0}
+  audio: {fileID: 971116656}
 --- !u!1 &982839094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5850924619158337558, guid: bf2a99787f8e4584db1dede16885be2f,
@@ -35591,6 +35603,11 @@ PrefabInstance:
       propertyPath: 'commandList.Array.data[6]'
       value: 
       objectReference: {fileID: 1225830410}
+    - target: {fileID: 3913124913306020585, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: text
+      value: Leave
+      objectReference: {fileID: 0}
     - target: {fileID: 3956773989499652982, guid: bf2a99787f8e4584db1dede16885be2f,
         type: 3}
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -36392,6 +36409,11 @@ PrefabInstance:
       propertyPath: 'commandList.Array.data[5]'
       value: 
       objectReference: {fileID: 1225830382}
+    - target: {fileID: 7726600791465507360, guid: bf2a99787f8e4584db1dede16885be2f,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 3095.5854
+      objectReference: {fileID: 0}
     - target: {fileID: 7734305767337937441, guid: bf2a99787f8e4584db1dede16885be2f,
         type: 3}
       propertyPath: text
@@ -52973,8 +52995,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08677de8416e0f4c9807481f2a0c906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taDa: {fileID: 0}
-  audio: {fileID: 0}
+  taDa: {fileID: 8300000, guid: 09716100244a24849befc16e71d3a720, type: 3}
+  audio: {fileID: 1339778979}
 --- !u!82 &1339778979
 AudioSource:
   m_ObjectHideFlags: 0
@@ -54198,7 +54220,7 @@ MonoBehaviour:
   startButton: {fileID: 5782313137683123425}
   clockUi: {fileID: 308939656}
   tickTimer: {fileID: 482536467}
-  tickRate: 2
+  tickRate: 0.1
   nextTick: 0
   timePassing: 1
   flowchart: {fileID: 1225830318}
