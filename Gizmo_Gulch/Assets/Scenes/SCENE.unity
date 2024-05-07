@@ -34831,17 +34831,17 @@ PrefabInstance:
     - target: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
         type: 3}
       propertyPath: zoom
-      value: 0.6399996
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
         type: 3}
       propertyPath: scrollPos.x
-      value: -3913.236
+      value: -3736.239
       objectReference: {fileID: 0}
     - target: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
         type: 3}
       propertyPath: scrollPos.y
-      value: 92.69864
+      value: -77.590775
       objectReference: {fileID: 0}
     - target: {fileID: 1527493008219096385, guid: bf2a99787f8e4584db1dede16885be2f,
         type: 3}
@@ -47668,8 +47668,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 3821.2734
-    y: 647.649
+    x: 3867.1738
+    y: 619.78015
     width: 114.94
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -54220,7 +54220,7 @@ MonoBehaviour:
   startButton: {fileID: 5782313137683123425}
   clockUi: {fileID: 308939656}
   tickTimer: {fileID: 482536467}
-  tickRate: 0.1
+  tickRate: 2
   nextTick: 0
   timePassing: 1
   flowchart: {fileID: 1225830318}
