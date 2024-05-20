@@ -40,6 +40,8 @@ public class Clock : MonoBehaviour
 
     public GameObject Player;
     public GameObject TPref;
+
+    public GameObject skillStuff;
     void Start()
     {
         EventController.instance.pauseTime += PauseTime;
@@ -166,10 +168,11 @@ public class Clock : MonoBehaviour
                     //Debug.Log("PISSPOO");
                     HiShree();
                     EventController.instance.PauseTime();
-                    ticks = -10;
+                    ticks = -1;
                     EventController.instance.UnlockCursor();
                     EventController.instance.ResetDay();
                     //DoTweenFadeIN_OUT.instance.FadeIn(5);
+                    skillStuff.SetActive(true) ;
                     StopTimer();
 
 
@@ -205,6 +208,7 @@ public class Clock : MonoBehaviour
         warningText.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
+        skillStuff.SetActive(true);
         isTimerRunning = false;
         // Stop the coroutine if it's running
         StopAllCoroutines();
@@ -261,7 +265,7 @@ public class Clock : MonoBehaviour
             EventController.instance.UnlockCursor();
             EventController.instance.ResetDay();
             EventController.instance.PauseTime();
-            ticks = -10;
+            ticks = -1;
         }
         // Optionally, you can do something when the timer reaches 0
     }
@@ -337,5 +341,8 @@ public class Clock : MonoBehaviour
 
     //tick += time.unscaleddeltatime*multiplier
 
-    
+    public void SkillsOff()
+    {
+        skillStuff.SetActive(false);
+    }
 }
