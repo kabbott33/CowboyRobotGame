@@ -48,6 +48,8 @@ public class EventController : MonoBehaviour
     public event Action night;
     public event Action resetDay;
 
+    public event Action timerStart;
+    public event Action timerStop;
     public event Action pauseTime;
     public event Action resumeTime;
 
@@ -114,6 +116,22 @@ public class EventController : MonoBehaviour
         if (resumeTime != null)
         {
             resumeTime();
+        }
+    }
+
+    public void StartTimerScript()
+    {
+        if (timerStart != null)
+        {
+            timerStart();
+        }
+    }
+
+    public void StopTimerScript()
+    {
+        if (timerStop != null)
+        {
+            timerStop();
         }
     }
 
