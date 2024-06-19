@@ -91,7 +91,7 @@ public class EndOfDay : MonoBehaviour
             isTimerRunning = true;
             //clockUi.gameObject.SetActive(false);
             // Start the timer coroutine
-            EventController.instance.StartTimerScript();
+            //EventController.instance.StartTimer();
         }
     }
 
@@ -108,7 +108,7 @@ public class EndOfDay : MonoBehaviour
 
         isTimerRunning = false;
         // Stop the coroutine if it's running
-        EventController.instance.StopTimerScript();
+        //EventController.instance.StopTimerScript();
         //playerAtTheBed = true;
     }
 

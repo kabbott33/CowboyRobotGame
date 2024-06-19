@@ -16,7 +16,7 @@ public class NPCDialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("FirstPersonController");
+        player = GameObject.Find("CONTROLLER");
     }
 
     // Update is called once per frame
@@ -31,6 +31,9 @@ public class NPCDialogue : MonoBehaviour
         {
             flowchart.ExecuteBlock(startBlockName);
             LookAtPlayer();
+            EventController.instance.UnlockCursor();
+            EventController.instance.PauseTime();
+
         }
 
     }
@@ -44,6 +47,8 @@ public class NPCDialogue : MonoBehaviour
     public void LookAway()
     {
         this.transform.eulerAngles = storedRotation.eulerAngles;
+        EventController.instance.LockCursor();
+        EventController.instance.PauseTime();
     }
     //public void LookAtPlayer()
 

@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 namespace Fungus
 {
@@ -48,6 +49,7 @@ namespace Fungus
         protected Command activeCommand;
 
         protected Action lastOnCompleteAction;
+
 
         /// <summary>
         // Index of last command executed before the current one.
@@ -381,6 +383,12 @@ namespace Fungus
 
             //force idle here so other commands that rely on block not executing are informed this frame rather than next
             ReturnToIdle();
+            DialogueEnd();
+        }
+
+        public void DialogueEnd()
+        {
+
         }
 
         /// <summary>

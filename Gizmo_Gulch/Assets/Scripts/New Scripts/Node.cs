@@ -47,6 +47,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     public GameObject board;
     void Start()
     {
+        flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
         identifier = this.gameObject.name;
         evidence =this.GetComponent<Image>();
 
@@ -55,7 +56,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
             goToPosition();
         }
 
-
+        
         text.raycastTarget = false;
     }
 
