@@ -3,6 +3,7 @@
 
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Fungus
 {
@@ -21,13 +22,21 @@ namespace Fungus
     /// Manages audio effects for Dialogs.
     /// </summary>
     public class WriterAudio : MonoBehaviour, IWriterListener
+
+        
     {
+
+
+        [SerializeField] public GameObject yapper;
+
         [Tooltip("Volume level of writing sound effects")]
         [Range(0,1)]
         [SerializeField] protected float volume = 1f;
 
         [Tooltip("Loop the audio when in Sound Effect mode. Has no effect in Beeps mode.")]
         [SerializeField] protected bool loop = true;
+
+
 
         // If none is specifed then we use any AudioSource on the gameobject, and if that doesn't exist we create one.
         [Tooltip("AudioSource to use for playing sound effects. If none is selected then one will be created.")]
@@ -110,6 +119,8 @@ namespace Fungus
                 targetAudioSource.clip = audioClip;
                 targetAudioSource.loop = loop;
                 targetAudioSource.Play();
+                Debug.Log("fartfetish");
+                SpeakAnim();
             }
             else if (audioMode == AudioMode.SoundEffect &&
                      soundEffect != null)
@@ -118,6 +129,8 @@ namespace Fungus
                 targetAudioSource.clip = soundEffect;
                 targetAudioSource.loop = loop;
                 targetAudioSource.Play();
+                SpeakAnim();
+                Debug.Log("fartfetish");
             }
             else if (audioMode == AudioMode.Beeps)
             {
@@ -152,6 +165,14 @@ namespace Fungus
             targetAudioSource.loop = false;
             playBeeps = false;
             playingVoiceover = false;
+        }
+
+        public void SpeakAnim()
+        {
+            if (yapper != null)
+            {
+                yapper.GetComponent<Yapper>().Yap();
+            }
         }
 
         protected virtual void Resume()
@@ -235,6 +256,8 @@ namespace Fungus
                             targetAudioSource.loop = false;
                             targetVolume = volume;
                             targetAudioSource.Play();
+                            Debug.Log("fartfetish");
+                            SpeakAnim();
 
                             float extend = targetAudioSource.clip.length;
                             nextBeepTime = Time.realtimeSinceStartup + extend;

@@ -48,7 +48,7 @@ public class NPCDialogue : MonoBehaviour
     {
         this.transform.eulerAngles = storedRotation.eulerAngles;
         EventController.instance.LockCursor();
-        EventController.instance.PauseTime();
+        EventController.instance.ResumeTime();
     }
     //public void LookAtPlayer()
 

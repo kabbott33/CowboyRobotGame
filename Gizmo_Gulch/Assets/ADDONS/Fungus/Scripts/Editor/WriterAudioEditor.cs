@@ -9,6 +9,7 @@ namespace Fungus.EditorUtils
     [CustomEditor (typeof(WriterAudio))]
     public class WriterAudioEditor : Editor
     {
+        protected SerializedProperty yapperProp;
         protected SerializedProperty volumeProp;
         protected SerializedProperty loopProp;
         protected SerializedProperty targetAudioSourceProp;
@@ -17,8 +18,10 @@ namespace Fungus.EditorUtils
         protected SerializedProperty soundEffectProp;
         protected SerializedProperty inputSoundProp;
 
+
         protected virtual void OnEnable()
         {
+            yapperProp = serializedObject.FindProperty("yapper");
             volumeProp = serializedObject.FindProperty("volume");
             loopProp = serializedObject.FindProperty("loop");
             targetAudioSourceProp = serializedObject.FindProperty("targetAudioSource");
@@ -32,6 +35,7 @@ namespace Fungus.EditorUtils
         {
             serializedObject.Update();
 
+            EditorGUILayout.PropertyField(yapperProp);
             EditorGUILayout.PropertyField(volumeProp);
             EditorGUILayout.PropertyField(loopProp);
             EditorGUILayout.PropertyField(targetAudioSourceProp);

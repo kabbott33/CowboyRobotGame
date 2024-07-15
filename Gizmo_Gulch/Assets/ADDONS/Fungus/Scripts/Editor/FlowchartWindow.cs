@@ -9,10 +9,15 @@ using System.Collections.Generic;
 using System.Reflection;
 using Object = UnityEngine.Object;
 
+
+
 namespace Fungus.EditorUtils
 {
+
+
     public class FlowchartWindow : EventWindow
     {
+
         protected class ClipboardObject
         {
             internal SerializedObject serializedObject;
@@ -91,11 +96,33 @@ namespace Fungus.EditorUtils
                     SerializedPropertyType.ArraySize
                 );
 
-                newBlock.BlockName = flowchart.GetUniqueBlockKey(block.FindProperty("blockName").stringValue + " (Copy)");
+                /*
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    newBlock.BlockName = flowchart.GetUniqueBlockKey(block.FindProperty("blockName").stringValue);
+                }
+                else
+                {
+                    newBlock.BlockName = flowchart.GetUniqueBlockKey(block.FindProperty("blockName").stringValue + " (Copy)");
+                }
+                */
+                /*
+                Event e = Event.current;
+                if (!(e.capsLock))
+                {
+                    newBlock.BlockName = flowchart.GetUniqueBlockKey(block.FindProperty("blockName").stringValue);
+                }
+                else
+                {
+                    newBlock.BlockName = block.FindProperty("blockName").stringValue;
+                }
+                */
+                newBlock.BlockName = block.FindProperty("blockName").stringValue;
 
                 return newBlock;
             }
         }
+
 
         protected struct BlockGraphics
         {
@@ -772,6 +799,7 @@ namespace Fungus.EditorUtils
 
         protected virtual void OnGUI()
         {
+    
             // TODO: avoid calling some of these methods in OnGUI because it should be possible
             // to only call them when the window is initialized or a new flowchart is selected, etc.
             if (HandleFlowchartSelectionChange()) return;

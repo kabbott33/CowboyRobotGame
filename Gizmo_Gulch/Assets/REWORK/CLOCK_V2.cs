@@ -18,6 +18,7 @@ public class CLOCK_V2 : MonoBehaviour
     public float nextTick = 0.0f;
 
 
+
     public bool timePassing = true;
 
     public Flowchart flowchart;
@@ -94,7 +95,8 @@ public class CLOCK_V2 : MonoBehaviour
             EventController.instance.Night();
             EventController.instance.NPCsToNight();
             clockHand.transform.rotation = Quaternion.Euler(0, 0, 180);
-            phaseOfDayText.text = " ";
+            flowchart.SetStringVariable(("phase"), "night");
+            phaseOfDayText.text = "night";
 
         }
     }
@@ -126,6 +128,15 @@ public class CLOCK_V2 : MonoBehaviour
         {
             ticks++;
             tickTimer.text = "TICK" + ticks;
+            flowchart.SetFloatVariable("ticks", ticks);
+            
         }
+    }
+
+    public void setTicks(float tickywicky)
+    {
+        ticks = tickywicky;
+        tickTimer.text = "TICK" + ticks;
+        flowchart.SetFloatVariable("ticks", ticks);
     }
 }

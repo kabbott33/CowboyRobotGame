@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class SUN_V3 : MonoBehaviour
 {
     // Sun transform
     public Transform sun;
-
+    public static SUN_V3 instance;
     //Sun positions
     public Transform predawnPosition;
     public Transform morningPosition;
     public Transform noonPosition;
     public Transform eveningPosition;
     public Transform postDuskPosition;
+
+    public Flowchart flowchart;
+
+    
+    
 
     public bool hoorayThisWillSurelyWorkCorrectly;
 
@@ -25,6 +31,8 @@ public class SUN_V3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;   
+
         EventController.instance.morning += Morning;
         EventController.instance.noon += Noon;
         EventController.instance.evening += Evening;
@@ -32,7 +40,7 @@ public class SUN_V3 : MonoBehaviour
         EventController.instance.resetDay += ResetDay;
         // Event subscriptions remain unchanged
 
-        this.transform.rotation = predawnPosition.rotation;
+        sun.transform.rotation = predawnPosition.rotation;
     }
 
     void Update()
@@ -116,6 +124,52 @@ public class SUN_V3 : MonoBehaviour
             speed = 20f;
         }
         
+    }
+    /*
+    public void setSun(string phaser)
+    {
+        if (phaser == "morning")
+        {
+            sun.rotation = morningPosition.rotation;
+        }
+        if (phaser == "noon")
+        {
+            sun.rotation = noonPosition.rotation;
+        }
+        if (phaser == "evening")
+        {
+            sun.rotation = eveningPosition.rotation;
+        }
+        if (phaser == "night")
+        {
+            sun.rotation = postDuskPosition.rotation;
+        }
+    }
+    */
+
+    public void sunSetTest(float rx, float ry, float rz)
+    {
+        StopAllCoroutines();
+        sun.transform.eulerAngles = new Vector3(rx, ry, rz);
+        if (flowchart.GetBooleanVariable("midrotation"))
+        {
+            if (flowchart.GetStringVariable("phase") == "morning")
+            {
+                StartCoroutine(RotateTowards(morningPosition.rotation));
+            }
+            if (flowchart.GetStringVariable("phase") == "noon")
+            {
+                StartCoroutine(RotateTowards(noonPosition.rotation));
+            }
+            if (flowchart.GetStringVariable("phase") == "evening")
+            {
+                StartCoroutine(RotateTowards(eveningPosition.rotation));
+            }
+            if (flowchart.GetStringVariable("phase") == "night")
+            {
+                StartCoroutine(RotateTowards(postDuskPosition.rotation));
+            }
+        }
     }
 
 }

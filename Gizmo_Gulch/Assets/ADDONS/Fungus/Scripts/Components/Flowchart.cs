@@ -160,6 +160,7 @@ namespace Fungus
             StringSubstituter.RegisterHandler(this);   
         }
 
+
         protected virtual void OnDisable()
         {
             cachedFlowcharts.Remove(this);
@@ -701,11 +702,12 @@ namespace Fungus
                     {
                         continue;
                     }
-                    if (block.BlockName.Equals(key, StringComparison.CurrentCultureIgnoreCase))
+                    
+                        if (block.BlockName.Equals(key, StringComparison.CurrentCultureIgnoreCase))
                     {
                         collision = true;
                         suffix++;
-                        key = baseKey + suffix;
+                       key = baseKey + suffix;
                     }
                 }
 
