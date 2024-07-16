@@ -8,8 +8,9 @@ public class NodeSO : ScriptableObject
     public int identifier;
     public int prereq;
     public Flowchart flowchart;
-    public Transform location;
+    public string location;
     public string description;
+
 
     // Start is called before the first frame update
     void Start()

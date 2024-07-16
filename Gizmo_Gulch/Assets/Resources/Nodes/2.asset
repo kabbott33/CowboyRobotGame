@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb888450229dd44b9df09f20654e347, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  identifier: 0
-  prereq: 0
+  identifier: 2
+  prereq: 1
   flowchart: {fileID: 0}
-  location: {fileID: 0}
-  description: 
+  location: NL2
+  description: DIRTY DOG
   altEvidence: 
-  altLocation: []
-  photo: {fileID: 0}
+  altLocation1: 
+  altLocation2: 
+  photo: {fileID: 21300000, guid: 5efb9cbb286ba7c409a74f151a38f630, type: 3}

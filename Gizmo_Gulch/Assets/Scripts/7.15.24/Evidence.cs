@@ -6,7 +6,8 @@ using UnityEngine;
 public class Evidence : NodeSO
 {
     public int[] altEvidence;
-    public Transform[] altLocation;
+    public string altLocation1;
+    public string altLocation2;
     // Start is called before the first frame update
     void Start()
     {

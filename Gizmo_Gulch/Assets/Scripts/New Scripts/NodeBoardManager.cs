@@ -22,6 +22,8 @@ public class NodeBoardManager : MonoBehaviour
         ExperienceManager.instance.NodeAdded();
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
