@@ -16,15 +16,23 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
     public bool isLockedIn;
 
     public GameObject newNodeGrid;
+    public GameObject scaleNode;
+
+    public GameObject scaler;
+
     // Start is called before the first frame update
     void Start()
     {
         newNodeGrid = FindInactiveGameObjectByName("New_Stuff");
+        scaler = FindInactiveGameObjectByName("NodeBoardContent");
         flowchart = GameObject.Find("Flowchart01").GetComponent<Flowchart>();
+        
     }
 
     public void Initialize(int nodeID)
     {
+        this.name = ("Node "+(nodeID.ToString()));
+        scaleNode = FindInactiveGameObjectByName("ScaleNode");
           string path = "Nodes/" + nodeID;
          nodeData = Resources.Load<NodeSO>(path);
         // nodeData = Resources.Load<NodeSO>("Nodes/2");
@@ -53,7 +61,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             }
         if (nodeData is Inference)
             {
-
+                GoToPosition();
             }
 
         }
@@ -63,55 +71,88 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
     {
         if (nodeData is Evidence evidenceNode)
         {
-            int existantPreReqs = 0;
-            foreach (int i in evidenceNode.altEvidence)
+            if (Node_Manager_V2.instance.lockedNodes.Contains(nodeData.prereq))
             {
-                if (Node_Manager_V2.instance.lockedNodes.Contains(i))
+                int existantAltPreReqs = 0;
+                foreach (int i in evidenceNode.altEvidence)
                 {
-                    existantPreReqs++;
+                    if (Node_Manager_V2.instance.lockedNodes.Contains(i))
+                    {
+                        existantAltPreReqs++;
 
+                    }
+                }
+                if (existantAltPreReqs == 0)
+                {
+                    GoToPosition();
+                }
+                if (existantAltPreReqs == 1)
+                {
+                    GoToSecondaryPosition();
+                }
+                if (existantAltPreReqs == 2)
+                {
+                    GoToTertiaryPosition();
                 }
             }
-            if (existantPreReqs == 0)
-            {
-                GoToPosition();
-            }
-            if (existantPreReqs == 1)
-            {
-                GoToSecondaryPosition();
-            }
-            if (existantPreReqs ==2)
-            {
-                GoToTertiaryPosition();
-            }
+            else;
         }
     }
     public void GoToPosition()
     {
+        NormalizeScale();
         this.transform.position = location.position;
         //this.transform.position = GameObject.Find((nodeData.location)).transform.position;
         this.transform.parent = location;
         //this.transform.parent = GameObject.Find((nodeData.location)).transform;
         Node_Manager_V2.instance.LockNode(nodeData.identifier);
+        this.GetComponent<Image>().raycastTarget = true;
+        isLockedIn = true;
     }
 
     public void GoToSecondaryPosition()
     {
         if (nodeData is Evidence evidenceNode)
         {
+            NormalizeScale();
             this.transform.position = GameObject.Find(evidenceNode.altLocation1).transform.position;
             this.transform.parent = GameObject.Find(evidenceNode.altLocation1).transform;
             Node_Manager_V2.instance.LockNode(nodeData.identifier);
+            this.GetComponent<Image>().raycastTarget = true;
+            isLockedIn = true;
         }
     }
     public void GoToTertiaryPosition()
     {
         if (nodeData is Evidence evidenceNode)
         {
+            NormalizeScale();
             this.transform.position = GameObject.Find(evidenceNode.altLocation2).transform.position;
             this.transform.parent = GameObject.Find(evidenceNode.altLocation1).transform;
             Node_Manager_V2.instance.LockNode(nodeData.identifier);
+            this.GetComponent<Image>().raycastTarget = true;
+            isLockedIn = true;
         }
+    }
+
+    public void NormalizeScale()
+    {
+        scaler = FindInactiveGameObjectByName("NodeBoardContent");
+        this.transform.localScale = scaler.transform.localScale;
+        /*
+        this.GetComponent<Image>().raycastTarget = true;
+        this.transform.SetParent(newNodeGrid.transform);
+        this.transform.SetAsLastSibling();
+        */
+        /*
+        
+        this.transform.localScale = scaleNode.transform.localScale;
+        this.transform.localScale = scaleNode.transform.localScale;
+        this.transform.localScale = scaleNode.transform.localScale;
+        */
+        //this.transform.SetAsLastSibling();
+        //Debug.Log(nodeData.prereq.ToString());
+        //this.transform.localScale = GameObject.Find(nodeData.prereq.ToString()).transform.localScale;
     }
 
     // Update is called once per frame

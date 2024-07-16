@@ -16,6 +16,7 @@ public class Node_Manager_V2 : MonoBehaviour
     void Start()
     {
         instance = this;
+        //AddNode(000);
     }
 
     public void AddNode(int nodeID)

@@ -23,7 +23,9 @@ public class InventoryUISlot : MonoBehaviour, IDropHandler
         Node_V2 Draggableitem = dropped.GetComponent<Node_V2>();
        // Draggableitem.parentAfterDrag = transform;
         Draggableitem.isInBoard = true;
-        Draggableitem.CheckPreReqs();
-
+        if (!(Draggableitem.isLockedIn))
+        {
+            Draggableitem.CheckPreReqs();
+        }
     }
 }
