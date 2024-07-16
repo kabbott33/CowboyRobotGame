@@ -16,7 +16,6 @@ public class Node_Manager_V2 : MonoBehaviour
     void Start()
     {
         instance = this;
-        AddNode(1);
     }
 
     public void AddNode(int nodeID)
@@ -30,12 +29,12 @@ public class Node_Manager_V2 : MonoBehaviour
     {
         lockedNodes.Add(nodeID);
         Inference_Manager_V2.instance.InferenceCheck();
-        ExperienceManager.instance.NodeAdded();
+        //ExperienceManager.instance.NodeAdded();
     }
 
     public void GenerateNode(int nodeID)
     {
-        GameObject newNode = Instantiate(nodePrefab, newNodeGrid.transform.position, newNodeGrid.transform.rotation);
+        GameObject newNode = Instantiate(nodePrefab, this.transform.position, this.transform.rotation);
         newNode.transform.SetParent(newNodeGrid.transform);
         newNode.transform.SetAsLastSibling();
         newNode.GetComponent<Node_V2>().Initialize(nodeID);

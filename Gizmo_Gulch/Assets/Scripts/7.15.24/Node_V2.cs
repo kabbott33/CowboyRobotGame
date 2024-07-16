@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Node_V2 : MonoBehaviour
+public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler
 {
     public bool isInBoard;
     public Transform location;
@@ -15,10 +15,11 @@ public class Node_V2 : MonoBehaviour
     public Flowchart flowchart;
     public bool isLockedIn;
 
-   
+    public GameObject newNodeGrid;
     // Start is called before the first frame update
     void Start()
     {
+        newNodeGrid = FindInactiveGameObjectByName("New_Stuff");
         flowchart = GameObject.Find("Flowchart01").GetComponent<Flowchart>();
     }
 
@@ -28,8 +29,9 @@ public class Node_V2 : MonoBehaviour
          nodeData = Resources.Load<NodeSO>(path);
         // nodeData = Resources.Load<NodeSO>("Nodes/2");
 
-        location = GameObject.Find((nodeData.location)).transform;
-        
+        location = FindInactiveGameObjectByName(nodeData.location).transform;
+        Debug.Log(nodeData.location);
+        this.GetComponent<Image>().raycastTarget = true;
 
         if (nodeData != null)
         {
@@ -86,8 +88,10 @@ public class Node_V2 : MonoBehaviour
     }
     public void GoToPosition()
     {
-        this.transform.position = location.position; 
+        this.transform.position = location.position;
+        //this.transform.position = GameObject.Find((nodeData.location)).transform.position;
         this.transform.parent = location;
+        //this.transform.parent = GameObject.Find((nodeData.location)).transform;
         Node_Manager_V2.instance.LockNode(nodeData.identifier);
     }
 
@@ -118,6 +122,7 @@ public class Node_V2 : MonoBehaviour
     //mouse events
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("nodeclicked");
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             flowchart.SetStringVariable("evidenceDescription", nodeData.description);
@@ -128,7 +133,7 @@ public class Node_V2 : MonoBehaviour
         {
             if (nodeData is Photo photoNode)
             {
-                Debug.Log("photclicked");
+                Debug.Log("photoclicked");
             }
             if (nodeData is Testimony testimonyNode)
             {
@@ -155,13 +160,65 @@ public class Node_V2 : MonoBehaviour
     public void OnEndDrag(PointerEventData eventData)
     {
         if ((eventData.button == PointerEventData.InputButton.Left) && (!(Node_Manager_V2.instance.lockedNodes.Contains(nodeData.identifier))))
-        {
-            this.GetComponent<Image>().raycastTarget = true;
-            //transform.SetParent(board.transform);
-            transform.SetAsLastSibling();
-        }
+            if (DropChecker())
+            {
+                {
+                    this.GetComponent<Image>().raycastTarget = true;
+                    //transform.SetParent(board.transform);
+                    transform.SetAsLastSibling();
+                }
+            }
+           else
+            {
+                this.GetComponent<Image>().raycastTarget = true;
+                this.transform.SetParent(newNodeGrid.transform);
+                this.transform.SetAsLastSibling();
+            }
     }
 
+
+    GameObject FindInactiveGameObjectByName(string name)
+    {
+        GameObject[] objects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in objects)
+        {
+            if (obj.name == name)
+            {
+                return obj;
+            }
+        }
+        return null;
+    }
+
+    //drop checker
+    public bool DropChecker()
+    {
+        PointerEventData pointerEventData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerEventData, results);
+
+        bool hit = false;
+        foreach (RaycastResult result in results)
+        {
+            if ((result.gameObject.name)== "NodeBoard")
+            {
+                hit = true;
+            }
+        }
+        
+        if (hit == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     //inference coroutine
 }

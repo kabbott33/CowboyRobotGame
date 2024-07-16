@@ -45,6 +45,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     public bool isLockedIn;
 
     public GameObject board;
+    public GameObject newNodes;
     void Start()
     {
         flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();

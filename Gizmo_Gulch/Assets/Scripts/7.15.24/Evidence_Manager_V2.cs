@@ -21,7 +21,7 @@ public class Evidence_Manager_V2 : MonoBehaviour
     public void ActivateEvidence()
     {
         int ID = flowchart.GetIntegerVariable("evidenceNumber");
-        Node_Manager_V2.instance.activeNodes.Add(ID);
+        Node_Manager_V2.instance.AddNode(ID);
 
         if (!(Node_Manager_V2.instance.activeNodes.Contains(ID)))
         {

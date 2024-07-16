@@ -256,7 +256,7 @@ namespace Fungus
                             targetAudioSource.loop = false;
                             targetVolume = volume;
                             targetAudioSource.Play();
-                            Debug.Log("fartfetish");
+                            Debug.Log("gibbering");
                             SpeakAnim();
 
                             float extend = targetAudioSource.clip.length;
