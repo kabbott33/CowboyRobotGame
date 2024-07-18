@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inference_Manager_V2 : MonoBehaviour
 {
     public static Inference_Manager_V2 instance;
-    public int[] catDogReqs;
+    public List<int> catDogReqs;
     public int catDogNum;
 
     
@@ -21,25 +21,33 @@ public class Inference_Manager_V2 : MonoBehaviour
         
     }
 
-    public void InferenceCheck()
+    public void DepreciatedInferenceCheck()
     {
-        //CatDog();
+        CatDog();
     }
 
     public void CatDog()
     {
-        int catDogCounter = 0;
-        foreach(int i in catDogReqs)
-        {
-            if (Node_Manager_V2.instance.lockedNodes.Contains(i))
-            {
-                catDogCounter++;
-                //Debug.Log("catdogcounter:" + catDogCounter);
-            }
-        }
-        if (catDogCounter >= catDogNum) 
+        
+        if (CountCommonElements(catDogReqs, Node_Manager_V2.instance.lockedNodes) >= catDogNum) 
         {
             Node_Manager_V2.instance.AddNode(4);
         }
+    }
+
+    public static int CountCommonElements(List<int> list1, List<int> list2)
+    {
+        HashSet<int> set = new HashSet<int>(list2);
+        int count = 0;
+
+        foreach (int num in list1)
+        {
+            if (set.Contains(num))
+            {
+                count++;
+            }
+        }
+
+        return count;
     }
 }

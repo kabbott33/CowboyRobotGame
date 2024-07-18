@@ -29,7 +29,7 @@ public class Node_Manager_V2 : MonoBehaviour
     public void LockNode(int nodeID)
     {
         lockedNodes.Add(nodeID);
-        Inference_Manager_V2.instance.InferenceCheck();
+        Inference_Manager_V3.instance.InferenceCheck();
         //ExperienceManager.instance.NodeAdded();
     }
 

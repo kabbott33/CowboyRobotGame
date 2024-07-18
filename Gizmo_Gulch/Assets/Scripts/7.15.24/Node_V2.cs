@@ -31,13 +31,21 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
 
     public void Initialize(int nodeID)
     {
-        this.name = ("Node "+(nodeID.ToString()));
         scaleNode = FindInactiveGameObjectByName("ScaleNode");
+        this.name = ("Node "+(nodeID.ToString()));
           string path = "Nodes/" + nodeID;
          nodeData = Resources.Load<NodeSO>(path);
         // nodeData = Resources.Load<NodeSO>("Nodes/2");
 
-        location = FindInactiveGameObjectByName(nodeData.location).transform;
+        if (GameObject.Find(nodeData.location) == null)
+        {
+            location = FindInactiveGameObjectByName(nodeData.location).transform;
+        }
+        else
+        {
+            location = GameObject.Find(nodeData.location).transform;
+        }
+        
         Debug.Log(nodeData.location);
         this.GetComponent<Image>().raycastTarget = true;
 
