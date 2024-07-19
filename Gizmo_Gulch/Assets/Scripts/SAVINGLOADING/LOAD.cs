@@ -25,6 +25,7 @@ public class LOAD : MonoBehaviour
         setTicks();
         //setSun();
         setPlayerPosition();
+        Node_Manager_V2.instance.LoadNodeStrings();
     }
 
     public void setTicks()

@@ -22,25 +22,32 @@ public class Inference_Manager_V3 : MonoBehaviour
 
     public void InferenceCheck()
     {
-        foreach (Inference inference in loadedInferences)
+        if (!(Node_Manager_V2.instance.loadingNodes))
         {
-            int metCount = 0;
-            foreach (int altReq in inference.additionalPrereqs)
+            foreach (Inference inference in loadedInferences)
             {
-                if (Node_Manager_V2.instance.lockedNodes.Contains(altReq))
+                int metCount = 0;
+                foreach (int altReq in inference.additionalPrereqs)
                 {
-                    metCount++;
+                    if (Node_Manager_V2.instance.lockedNodes.Contains(altReq))
+                    {
+                        metCount++;
+                    }
                 }
-            }
-            if (metCount >= inference.requesitePrereqNum)
-            {
-                if ((!(Node_Manager_V2.instance.lockedNodes.Contains(inference.identifier))) && (Node_Manager_V2.instance.lockedNodes.Contains(inference.prereq)))
+                if (metCount >= inference.requesitePrereqNum)
                 {
-                    Node_Manager_V2.instance.AddNode(inference.identifier);
+                    if ((!(Node_Manager_V2.instance.lockedNodes.Contains(inference.identifier))) && (Node_Manager_V2.instance.lockedNodes.Contains(inference.prereq)))
+                    {
+                        Inference_UI.instance.StartLoading(inference.identifier);
+                        //Node_Manager_V2.instance.AddNode(inference.identifier);
+                    }
                 }
             }
         }
+
     }
+
+
 
     // Update is called once per frame
     void Update()

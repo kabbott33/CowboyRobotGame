@@ -20,9 +20,14 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
 
     public GameObject scaler;
 
+    public GameObject outline;
+
+    public AudioSource bruh;
+
     // Start is called before the first frame update
     void Start()
     {
+        outline.SetActive(false);
         newNodeGrid = FindInactiveGameObjectByName("New_Stuff");
         scaler = FindInactiveGameObjectByName("NodeBoardContent");
         flowchart = GameObject.Find("Flowchart01").GetComponent<Flowchart>();
@@ -61,6 +66,10 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
                 if (nodeData is Testimony testimonyNode)
                 {
 
+                }
+                if (Node_Manager_V2.instance.loadingNodes)
+                {
+                    CheckPreReqs();
                 }
             }
         if (nodeData is Default)
@@ -116,6 +125,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
         Node_Manager_V2.instance.LockNode(nodeData.identifier);
         this.GetComponent<Image>().raycastTarget = true;
         isLockedIn = true;
+        StartCoroutine(ScaleUpAndDestroy(0.1f));
     }
 
     public void GoToSecondaryPosition()
@@ -128,6 +138,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             Node_Manager_V2.instance.LockNode(nodeData.identifier);
             this.GetComponent<Image>().raycastTarget = true;
             isLockedIn = true;
+            StartCoroutine(ScaleUpAndDestroy(0.1f));
         }
     }
     public void GoToTertiaryPosition()
@@ -140,6 +151,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             Node_Manager_V2.instance.LockNode(nodeData.identifier);
             this.GetComponent<Image>().raycastTarget = true;
             isLockedIn = true;
+            StartCoroutine(ScaleUpAndDestroy(0.1f));
         }
     }
 
@@ -268,6 +280,30 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             return false;
         }
     }
+
+    public IEnumerator ScaleUpAndDestroy(float duration)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            bruh.Play();
+            Debug.Log("isthisshietevenworking");
+            outline.SetActive(true);
+            Vector3 originalScale = outline.transform.localScale;
+            Vector3 targetScale = originalScale * 1.25f;
+            float elapsedTime = 0f;
+
+            while (elapsedTime < duration)
+            {
+                outline.transform.localScale = Vector3.Lerp(originalScale, targetScale, elapsedTime / duration);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            outline.transform.localScale = targetScale;
+            Destroy(outline);
+        }
+    }
+    
 
     //inference coroutine
 }

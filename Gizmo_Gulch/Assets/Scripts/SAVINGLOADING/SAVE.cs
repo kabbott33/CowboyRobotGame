@@ -41,6 +41,8 @@ public class SAVE : MonoBehaviour
             flowchart.SetBooleanVariable("midrotation", false);
         }
 
+        Node_Manager_V2.instance.SaveNodeStrings();
+
         flowchart.ExecuteBlock("SAVE");
     }
     // Start is called before the first frame update
