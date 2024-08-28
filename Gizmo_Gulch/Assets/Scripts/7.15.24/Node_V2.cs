@@ -166,34 +166,34 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
         
         if (!(nodeData is Inference inference && inference.isDotNode))
         {
-            return;
+            if (nodeData is NodeSO node)
+            {
+                if (GameObject.Find("Node " + (node.prereq)) == null)
+                {
+                    Debug.Log("FUCK");
+                }
+                else
+                {
+                    Transform preReqLocation = GameObject.Find("Node " + (node.prereq)).transform;
+                    //Vector2 lineDirection = this.transform.position - preReqLocation.position;
+                    //Quaternion lineRotation = Quaternion.LookRotation(lineDirection, Vector2.up);
+
+                    GameObject line = Instantiate(redLine, this.transform.position, this.transform.rotation);
+
+                    //GameObject line = Instantiate(redLine, preReqLocation.position, lineRotation);
+                    line.transform.parent = EventController.instance.stringContainer.transform;
+                    line.transform.SetAsLastSibling();
+                    line.GetComponent<LineRenderer_01>().InitializeFromNode(preReqLocation, this.transform);
+                }
+                //Debug.Log("preReq:" + (node.prereq.ToString())); 
+            }
         }
         else
         {
             GenerateAltLine();
         }
         
-        if (nodeData is NodeSO node)
-        {
-            if (GameObject.Find("Node " + (node.prereq)) == null)
-            {
-                Debug.Log("FUCK");
-            }
-            else
-            {
-                Transform preReqLocation = GameObject.Find("Node " + (node.prereq)).transform;
-                //Vector2 lineDirection = this.transform.position - preReqLocation.position;
-                //Quaternion lineRotation = Quaternion.LookRotation(lineDirection, Vector2.up);
-
-                GameObject line = Instantiate(redLine, this.transform.position, this.transform.rotation);
-
-                //GameObject line = Instantiate(redLine, preReqLocation.position, lineRotation);
-                line.transform.parent = EventController.instance.stringContainer.transform;
-                line.transform.SetAsLastSibling();
-                line.GetComponent<LineRenderer_01>().InitializeFromNode(preReqLocation, this.transform);
-            }
-                //Debug.Log("preReq:" + (node.prereq.ToString())); 
-        }
+        
     }
 
     public void GenerateAltLine()
