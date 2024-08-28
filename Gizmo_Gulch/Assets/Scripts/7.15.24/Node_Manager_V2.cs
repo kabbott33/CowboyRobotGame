@@ -29,7 +29,7 @@ public class Node_Manager_V2 : MonoBehaviour
     }
 
     public void AddNode(int nodeID)
-    {
+    {   
         activeNodes.Add(nodeID);
         GenerateNode(nodeID);
         Debug.Log("Added node" + (nodeID));

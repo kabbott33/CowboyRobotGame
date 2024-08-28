@@ -14,6 +14,9 @@ public class EventController : MonoBehaviour
 
     public bool isPaused;
     public bool isRotating;
+    public GameObject UI;
+    public GameObject stringContainer;
+    public GameObject nodeScaler;
 
     private void Awake()
     {

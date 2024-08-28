@@ -16,8 +16,8 @@ MonoBehaviour:
   prereq: 1
   flowchart: {fileID: 0}
   location: NL2
-  description: DIRTY DOG
+  description: Gang Dead
+  image: {fileID: 21300000, guid: 113d8a8f2d5050b439aadc8518a21aea, type: 3}
   altEvidence: 
   altLocation1: 
   altLocation2: 
-  photo: {fileID: 21300000, guid: 5efb9cbb286ba7c409a74f151a38f630, type: 3}

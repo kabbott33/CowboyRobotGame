@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -23,6 +24,8 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
     public GameObject outline;
 
     public AudioSource bruh;
+
+    public GameObject redLine;
 
     // Start is called before the first frame update
     void Start()
@@ -56,13 +59,13 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
 
         if (nodeData != null)
         {
+            if (nodeData is NodeSO node)
+            {
+                this.GetComponent<Image>().sprite = node.image;
+            }
             if (nodeData is Evidence evidenceNode)
             {
 
-                if (nodeData is Photo photoNode)
-                {
-                    this.GetComponent<Image>().sprite = photoNode.photo;
-                }
                 if (nodeData is Testimony testimonyNode)
                 {
 
@@ -125,6 +128,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
         Node_Manager_V2.instance.LockNode(nodeData.identifier);
         this.GetComponent<Image>().raycastTarget = true;
         isLockedIn = true;
+        GenerateLine();
         StartCoroutine(ScaleUpAndDestroy(0.1f));
     }
 
@@ -138,6 +142,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             Node_Manager_V2.instance.LockNode(nodeData.identifier);
             this.GetComponent<Image>().raycastTarget = true;
             isLockedIn = true;
+            GenerateLine();
             StartCoroutine(ScaleUpAndDestroy(0.1f));
         }
     }
@@ -151,8 +156,74 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
             Node_Manager_V2.instance.LockNode(nodeData.identifier);
             this.GetComponent<Image>().raycastTarget = true;
             isLockedIn = true;
+            GenerateLine();
             StartCoroutine(ScaleUpAndDestroy(0.1f));
         }
+    }
+
+    public void GenerateLine()
+    {
+        
+        if (!(nodeData is Inference inference && inference.isDotNode))
+        {
+            return;
+        }
+        else
+        {
+            GenerateAltLine();
+        }
+        
+        if (nodeData is NodeSO node)
+        {
+            if (GameObject.Find("Node " + (node.prereq)) == null)
+            {
+                Debug.Log("FUCK");
+            }
+            else
+            {
+                Transform preReqLocation = GameObject.Find("Node " + (node.prereq)).transform;
+                //Vector2 lineDirection = this.transform.position - preReqLocation.position;
+                //Quaternion lineRotation = Quaternion.LookRotation(lineDirection, Vector2.up);
+
+                GameObject line = Instantiate(redLine, this.transform.position, this.transform.rotation);
+
+                //GameObject line = Instantiate(redLine, preReqLocation.position, lineRotation);
+                line.transform.parent = EventController.instance.stringContainer.transform;
+                line.transform.SetAsLastSibling();
+                line.GetComponent<LineRenderer_01>().InitializeFromNode(preReqLocation, this.transform);
+            }
+                //Debug.Log("preReq:" + (node.prereq.ToString())); 
+        }
+    }
+
+    public void GenerateAltLine()
+    {
+        if (nodeData is NodeSO node)
+        {
+            if (nodeData is Inference inference && inference.isDotNode)
+            {
+                foreach (int i in inference.additionalPrereqs)
+                    if (GameObject.Find("Node " + (i)) == null)
+                    {
+                        Debug.Log("FUCK");
+                    }
+                    else
+                    {
+                        Transform preReqLocation = GameObject.Find("Node " + (i)).transform;
+                        //Vector2 lineDirection = this.transform.position - preReqLocation.position;
+                        //Quaternion lineRotation = Quaternion.LookRotation(lineDirection, Vector2.up);
+
+                        GameObject line = Instantiate(redLine, this.transform.position, this.transform.rotation);
+
+                        //GameObject line = Instantiate(redLine, preReqLocation.position, lineRotation);
+                        line.transform.parent = EventController.instance.stringContainer.transform;
+                        line.transform.SetAsLastSibling();
+                        line.GetComponent<LineRenderer_01>().InitializeFromNode(preReqLocation, this.transform);
+                    }
+               
+            }
+        }
+
     }
 
     public void NormalizeScale()
@@ -206,7 +277,7 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
     {
         if ((eventData.button == PointerEventData.InputButton.Left) && (!(Node_Manager_V2.instance.lockedNodes.Contains(nodeData.identifier))))
         {
-            transform.SetParent(transform.root);
+            transform.SetParent(EventController.instance.UI.transform);
             transform.SetAsLastSibling();
             this.GetComponent<Image>().raycastTarget = false;
         }

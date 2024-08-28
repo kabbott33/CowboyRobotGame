@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Photo", menuName = "Nodes/New Evidence/New Photo", order = 2)]
 public class Photo : Evidence
 {
-    public Sprite photo;
+    //public Sprite photo;
     // Start is called before the first frame update
     void Start()
     {

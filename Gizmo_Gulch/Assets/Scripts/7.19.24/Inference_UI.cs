@@ -50,7 +50,7 @@ public class Inference_UI : MonoBehaviour
 
             // Update inference text with dots
             dotCount = (int)((elapsedTime / loadingDuration) * 9) % 4; // Cycle through 0, 1, 2, 3
-            inferenceText.text = "INFERENCE DETECTED" + new string('.', dotCount);
+            inferenceText.text = "GENERATING THING" + new string('.', dotCount);
 
             yield return null;
         }

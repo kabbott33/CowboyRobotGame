@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   identifier: 3
-  prereq: 1
+  prereq: 2
   flowchart: {fileID: 0}
   location: NL3
-  description: CRUSTY CAT
+  description: Blood everywhere
+  image: {fileID: 21300000, guid: da98b873ce22a914db1af747087f9ccf, type: 3}
   altEvidence: 
   altLocation1: 
   altLocation2: 
-  photo: {fileID: 21300000, guid: c09996365e5ab0347a844aa966810713, type: 3}
