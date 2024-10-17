@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Default Node", menuName = "Nodes/New Default Node")]
 public class Default : NodeSO
 {
-    public string shithole;
+    public string Debug;
     // Start is called before the first frame update
     void Start()
     {

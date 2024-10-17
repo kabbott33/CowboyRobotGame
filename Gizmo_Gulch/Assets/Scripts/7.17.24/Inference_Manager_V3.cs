@@ -39,7 +39,6 @@ public class Inference_Manager_V3 : MonoBehaviour
                     if ((!(Node_Manager_V2.instance.lockedNodes.Contains(inference.identifier))) && (Node_Manager_V2.instance.lockedNodes.Contains(inference.prereq)))
                     {
                         Inference_UI.instance.StartLoading(inference.identifier);
-                        //Node_Manager_V2.instance.AddNode(inference.identifier);
                     }
                 }
             }

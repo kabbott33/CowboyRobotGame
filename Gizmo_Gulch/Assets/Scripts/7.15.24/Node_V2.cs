@@ -175,17 +175,16 @@ public class Node_V2 : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragH
                 else
                 {
                     Transform preReqLocation = GameObject.Find("Node " + (node.prereq)).transform;
-                    //Vector2 lineDirection = this.transform.position - preReqLocation.position;
-                    //Quaternion lineRotation = Quaternion.LookRotation(lineDirection, Vector2.up);
+
 
                     GameObject line = Instantiate(redLine, this.transform.position, this.transform.rotation);
 
-                    //GameObject line = Instantiate(redLine, preReqLocation.position, lineRotation);
+
                     line.transform.parent = EventController.instance.stringContainer.transform;
                     line.transform.SetAsLastSibling();
                     line.GetComponent<LineRenderer_01>().InitializeFromNode(preReqLocation, this.transform);
                 }
-                //Debug.Log("preReq:" + (node.prereq.ToString())); 
+
             }
         }
         else

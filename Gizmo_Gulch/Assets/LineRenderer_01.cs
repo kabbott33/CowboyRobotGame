@@ -20,14 +20,9 @@ public class LineRenderer_01 : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle-90));
         transform.rotation = rotation;
-        // Vector2 lineDirection = this.transform.position - preReqTransform.position;
-        //Quaternion lineRotation = Quaternion.LookRotation(lineDirection, Vector2.up);
         this.transform.position = preReqTransform.position;
-        //this.transform.rotation = lineRotation;
 
         StartCoroutine(Elongate(preReqTransform, newNodeTransform));
-
-
     }
 
     public IEnumerator Elongate(Transform preReqTransform, Transform newNodeTransform)
