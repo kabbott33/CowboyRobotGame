@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 94d9042f74675754e857651bed4f0251
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Materials/M_TilingBreak-up.mat
+  uploadId: 380288

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 81889c6c6896d504cbfc9f87af97d077
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Materials/M_Text.mat
+  uploadId: 380288

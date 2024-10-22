@@ -23,10 +23,10 @@
 
 	SubShader
 	{
-		Tags { "RenderType" = "Opaque" }
+		Tags { "RenderType" = "Opaque"  "RenderPipeline" = "UniversalPipeline"}
 		LOD 200
 
-		CGPROGRAM
+		HLSPROGRAM
 
 		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma surface surf Standard fullforwardshadows
@@ -34,6 +34,7 @@
 		#pragma target 4.0
 
 		#include "Assets/VertPaint/Shaders/CG include files/heightblend.cginc"
+		#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
 		struct Input 
 		{
@@ -45,6 +46,12 @@
 			float2 uv_MSHAO2;
 
 			float4 vertColor: COLOR;
+		};
+		struct Varyings
+		{
+			// The positions in this struct must have the SV_POSITION semantic.
+			float4 positionHCS  : SV_POSITION;
+			float2 uv : TEXCOORD0;
 		};
 
 		float4 _Color1;
@@ -90,7 +97,7 @@
 			o.Occlusion = heightblend(mshao1.a, height1, mshao2.a, height2);
 		}
 
-		ENDCG
+		ENDHSL
 	}
 	
 	FallBack "Glitched Polygons/2-Way Vertex Color Blending (Height Based)"

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 61d856d6519fb0346938bbe7a4c96f66
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Materials/M_DisplayCage_06.mat
+  uploadId: 380288

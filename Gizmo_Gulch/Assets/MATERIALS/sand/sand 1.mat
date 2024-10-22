@@ -37,13 +37,13 @@ Material:
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _SmoothnessTextureChannel
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: fd8b3da8229bd894f86b35109efb7844, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: b8a43f1e9d739284c8ebb73010d92ddc, type: 3}
@@ -67,7 +67,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: fd8b3da8229bd894f86b35109efb7844, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 5f55a145098b41d408dba04950dc450f, type: 3}

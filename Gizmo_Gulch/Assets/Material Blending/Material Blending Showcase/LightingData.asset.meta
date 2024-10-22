@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 20d8fd69f2c9d674d97ffc8d24e66c5a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Material Blending Showcase/LightingData.asset
+  uploadId: 380288
