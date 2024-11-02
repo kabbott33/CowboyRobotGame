@@ -14,25 +14,14 @@ public class EventController : MonoBehaviour
 
     public bool isPaused;
     public bool isRotating;
+    public GameObject UI;
+    public GameObject stringContainer;
+    public GameObject nodeScaler;
 
     private void Awake()
     {
         instance = this;
     }
-
-
-    /// <summary>
-    /// Example of setting up an UnityAction
-    /// Here we are creating a simple placeholder event called OnEnd
-    /// To subscribe to this event from any of your script Use the syntax
-    /// 
-    /// * EventController.instance.OnEnd +=  * WHAT EVER YOUR FUNCTION NAME IS ON YOUR SCRIPT *
-    /// 
-    /// You can create multiple such events, Just make sure you call the correct function where you need it.
-    /// In this example, You still have to call "EventController.instance.GameEnded()" somewhere for it to trigger.
-    /// </summary>
-    /// 
-
     public event Action OnEnd;
     public void GameEnded()
     {
@@ -48,6 +37,8 @@ public class EventController : MonoBehaviour
     public event Action night;
     public event Action resetDay;
 
+    public event Action timerStart;
+    public event Action timerStop;
     public event Action pauseTime;
     public event Action resumeTime;
 
@@ -62,6 +53,8 @@ public class EventController : MonoBehaviour
 
     public event Action lockCursor;
     public event Action unlockCursor;
+
+    public bool dayEnding = false;
 
     
 
@@ -117,6 +110,22 @@ public class EventController : MonoBehaviour
         }
     }
 
+    public void StartTimer()
+    {
+        if (timerStart != null)
+        {
+            timerStart();
+        }
+    }
+
+    public void StopTimer()
+    {
+        if (timerStop != null)
+        {
+            timerStop();
+        }
+    }
+
     public void NPCsToMorning()
     {
         if (npcsToMorning != null)
@@ -148,17 +157,6 @@ public class EventController : MonoBehaviour
             npcsToNight();
         }
     }
-
-
-    /*
-    public void MoveToNextTarget()
-    {
-        if (moveNPC != null)
-        {
-            moveNPC();
-        }
-    }
-    */
     public void LockCursor()
     {
         if (lockCursor != null)

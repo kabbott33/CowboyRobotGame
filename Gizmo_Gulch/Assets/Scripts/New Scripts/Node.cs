@@ -45,8 +45,10 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     public bool isLockedIn;
 
     public GameObject board;
+    public GameObject newNodes;
     void Start()
     {
+        flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
         identifier = this.gameObject.name;
         evidence =this.GetComponent<Image>();
 
@@ -55,7 +57,7 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
             goToPosition();
         }
 
-
+        
         text.raycastTarget = false;
     }
 
@@ -71,26 +73,19 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
                 transform.SetAsLastSibling();
                 evidence.raycastTarget = false;
             }
-
         }
-
-
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //if (!isInBoard)
-
         if (!(isLockedIn)) 
         {
             if (evidence)
             {
-                Debug.Log("Dragin");
+                Debug.Log("Draggin");
                 transform.position = Input.mousePosition;
             }
-
         }
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -98,17 +93,11 @@ public class Node : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         if (!(isLockedIn))
         {
             Debug.Log("End Drag");
-
-           
         }
         evidence.raycastTarget = true;
         transform.SetParent(board.transform);
         transform.SetAsLastSibling();
-
         CheckFloatingNodes();
-
-       // goToPosition();
-        //DropIntoBoard();
     }
     // Start is called before the first frame update
 

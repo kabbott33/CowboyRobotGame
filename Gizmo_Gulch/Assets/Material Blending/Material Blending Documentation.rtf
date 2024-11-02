@@ -1,0 +1,60 @@
+Material Blending Documentation
+
+In this package, you will find several different Shadergraph shaders to be used for texture blending. The shaders are made for easy expansion and quick edits. 
+
+Although there are a couple of shaders which can be used right away, all of the example shaders are set up according to our pipeline.  
+So I encourage you to pick and choose between the multiple different methods of blending and construct a shader that is right for you. 
+Currently this pack does not have tesselation and displacement, because it is not yet supported by Shadergraph. However I will be updating this package when it finally arrives.
+
+Layered Blending
+
+This shader blends multiple material layers based on height and a transition
+phase (an intensity-based mask).  The example shader has four different material layers which can be painted on the mesh using vertex colours. 
+Layer 0 is a base layer which is at all times unmasked.(Black in all channels)
+Layer 1 uses the red channel.
+Layer 2 uses the green channel.
+Layer 3 uses the blue channel.
+
+The shader uses two subgraphs for easy expandability and ease of use. The Material Layer subgraph handles the tiling of the material and sampling of the textures. The MaterialBlending AOMixing does the blending using the subgraph HeightLerp and AOMixing.
+
+Blending materials work best when the heightmap is in a 0-1 range. Other heightmaps still work but are likely to be more sensitive to value changes in the transition phase.
+Currently, the shader is using the vertex colours for creating different masks for each layer. However, the shader can easily be edited to be used in clown masked material workflows and splat map setups. You only have to replace the transition phase input.
+
+Triplanar Layered Blending
+The example shader of this shader is very similar to the Layered Blending, but it uses the subgraph Material Layer Triplanar.
+This subgraph uses the standard shader graph triplanar node for sampling the material textures.
+
+One of the options lets you switch between the different spaces for the triplanar. Local space and world space are examples of this. However, this enum keyword variable is currently reacting a bit buggy and might not do anything. This might be fixed in a future update for shader graph.
+
+AO Mixing
+Even though the regular height blending works great in a lot of cases, the two materials still feel somewhat disconnected from each other. This subgraph
+addresses a lot of these issues by providing extra AO near the transition height, simulating the contact area where contact shadows often occur.
+
+The main inputs for the AO Mixing are a heightmap and transition phase value. This will create a mask around the transition area and with two extra variables (range and strength) you can finetune the mixing.
+
+Water Blending
+A common trick to make your materials look more grounded and interesting is adding differences in roughness (smoothness). The water blending example shader shows how to add water to a material layer setup. The WaterLayer subgraph will blend a material layer with a body of water at a specific transition phase with our Material Blending and adds addition modifications on top.
+
+The heightmap input is used to simulate the depth and colour of the water. We construct a mask for adding a wet edge at the transition phase by using the blended heightmap output. Because the WaterLayer subgraph acts the same as the MaterialBlending, you can just add it as another material layer.
+
+Tiling Break-up
+The last example shader shows a method to break-up texture tiling with non-regular textures. It works by sampling a texture twice and offsetting it by a low-frequency noise texture.
+
+Note that this will warp and distort the input texture a bit, hence this technique is not recommended for pattern-based textures such as bricks and tiles.
+
+The shader is based on a shader from Shadertoy and if you want to know how it works, I encourage you to check it out.
+
+Fix mip texture tiling 2 taps
+https://www.shadertoy.com/view/WdVGWG
+
+Contact
+If you encountered any problems or want to know more about the inner workings of the shader, feel free to send me a mail regarding your specific issue. Or join our Discord server where we can provide instant help and a learning environment.
+
+Contact mail
+Quint@emberglitch.com
+
+Discord
+https://discord.gg/wkGQh2r
+
+All the textures used in this package are from the amazing Texture Haven website and repacked to fit our production pipeline.
+https://texturehaven.com/

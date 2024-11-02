@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a5fb8919fb29f294d921d4c36c904723
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Materials/M_TriplanarLayeredBlending.mat
+  uploadId: 380288

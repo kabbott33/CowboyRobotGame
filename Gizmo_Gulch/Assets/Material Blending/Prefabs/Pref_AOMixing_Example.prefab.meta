@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 96eb371408362474094608681eafaf7a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Prefabs/Pref_AOMixing_Example.prefab
+  uploadId: 380288

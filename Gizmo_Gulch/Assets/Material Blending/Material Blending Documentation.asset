@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Material Blending Documentation
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 8b51422ff22a04c45a9716825c7ce074, type: 3}
+  title: Material Blending Documentation
+  sections:
+  - heading: 
+    text: "In this package, you will find several different Shadergraph shaders to
+      be used for texture blending.  The shaders are made for easy expansion and
+      quick edits. \n\nAlthough there are a couple of shaders which can be used right
+      away, all of the example shaders are set up according to our pipeline.  So
+      I encourage you to pick and choose between the multiple different methods of
+      blending and construct a shader that is right for you.\nCurrently this pack
+      does not have tesselation and displacement, because it is not yet supported
+      by Shadergraph. However I will be updating this package when it finally arrives."
+    linkText: 
+    url: 
+  - heading: Layered Blending
+    text: "This shader blends multiple material layers based on height and a transition
+      phase (an intensity-based mask).  The example shader has four different material
+      layers which can be painted on the mesh using vertex colours. \nLayer 0
+      is a base layer which is at all times unmasked.(Black in all channels)\nLayer
+      1 uses the red channel.\nLayer 2 uses the green channel.\nLayer
+      3 uses the blue channel.\n\nThe shader uses two subgraphs for easy expandability
+      and ease of use.  The MaterialLayer subgraph handles the tiling of the material
+      and sampling of the textures.  The MaterialBlending AOMixing does the blending
+      using the subgraph HeightLerp and AOMixing.\n\nBlending materials work best
+      when the heightmap is in a 0-1 range.  Other heightmaps still work but
+      are likely to be more sensitive to value changes in the transition phase.\n\nCurrently,
+      the shader is using the vertex colours for creating different masks for each
+      layer.  However, the shader can easily be edited to be used in clown masked
+      material workflows and splat map setups.  You only have to replace the transition
+      phase input."
+    linkText: 
+    url: 
+  - heading: Triplanar Layered Blending
+    text: 'The example shader of this shader is very similar to the Layered Blending
+      but it uses the subgraph MaterialLayer Triplanar.  This subgraph uses the standard
+      shader graph triplanar node for sampling the material textures.
+
+
+      One
+      of the options lets you switch between the different spaces for the triplanar.
+      Local space and world space are examples of this. However, this enum keyword
+      variable is currently reacting a bit buggy and might not do anything. This
+      might be fixed in a future update for shader graph.'
+    linkText: 
+    url: 
+  - heading: AO Mixing
+    text: 'Even though the regular height blending works great in a lot of cases,
+      the two materials still feel somewhat disconnected from each other. This subgraph
+      addresses a lot of these issues by providing extra AO near the transition height,
+      simulating the contact area where contact shadows often occur.
+
+
+      The
+      main inputs for the AO Mixing are a heightmap and transition phase value. This
+      will create a mask around the transition area and with two extra variables
+      (range and strength) you can finetune the mixing.'
+    linkText: 
+    url: 
+  - heading: Water Blending
+    text: "A common trick to make your materials look more grounded and interesting
+      is adding differences in roughness (smoothness).  The water blending example
+      shader shows how to add water to a material layer setup.  The WaterLayer subgraph
+      will blend a material layer with a body of water at a specific transition phase
+      with our MaterialBlending and adds addition modifications on top. \n\nThe heightmap
+      input is used to simulate the depth and colour of the water. We construct a
+      mask for adding a wet edge at the transition phase by using the blended heightmap
+      output. Because the WaterLayer subgraph acts the same as the MaterialBlending,
+      you can just add it as another material layer."
+    linkText: 
+    url: 
+  - heading: Tiling Break-up
+    text: 'The last example shader shows a method to break-up texture tiling with
+      non-regular textures. It works by sampling a texture twice and offsetting it
+      by a low-frequency noise texture.
+
+      Note that this will warp and distort
+      the input texture a bit, hence this technique is not recommended for pattern-based
+      textures such as bricks and tiles.
+
+
+      The shader is based on a shader
+      from Shadertoy and if you want to know how it works, I encourage you to check
+      it out.'
+    linkText: Fix mip texture tiling 2 taps
+    url: https://www.shadertoy.com/view/WdVGWG
+  - heading: Contact
+    text: If you encountered any problems or want to know more about the inner workings
+      of the shader, feel free to send me a mail regarding your specific issue.
+    linkText: Contact mail
+    url: mailto:Quint@emberglitch.com
+  - heading: 
+    text: Or join our Discord server where we can provide instant help and a learning
+      environment.
+    linkText: Discord
+    url: https://discord.gg/wkGQh2r
+  - heading: 
+    text: All the textures used in this package are from the amazing Texture Haven
+      website and repacked to fit our production pipeline.
+    linkText: Texture Haven
+    url: https://texturehaven.com/
+  loadedLayout: 1

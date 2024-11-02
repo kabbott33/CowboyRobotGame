@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0575e19b919cff44e91cf136c960bf14
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Settings/URPSettings_Renderer.asset
+  uploadId: 380288

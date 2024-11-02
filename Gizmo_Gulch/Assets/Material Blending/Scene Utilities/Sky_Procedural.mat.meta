@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6f444a5a74345f498a45aada49f83ca
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Scene Utilities/Sky_Procedural.mat
+  uploadId: 380288

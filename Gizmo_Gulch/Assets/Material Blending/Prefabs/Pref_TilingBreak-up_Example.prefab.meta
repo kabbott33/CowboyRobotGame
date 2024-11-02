@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c71d4cc5149b1a446b35c8e6a4d53501
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 174745
+  packageName: Material Blending Shaders (URP)
+  packageVersion: 1.0
+  assetPath: Assets/Material Blending/Prefabs/Pref_TilingBreak-up_Example.prefab
+  uploadId: 380288
