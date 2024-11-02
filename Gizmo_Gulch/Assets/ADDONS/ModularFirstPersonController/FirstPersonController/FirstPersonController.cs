@@ -219,7 +219,7 @@ public class FirstPersonController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Debug.Log("cursorlocked");
-        cameraCanMove = true;
+        //cameraCanMove = true;
     }
 
 
