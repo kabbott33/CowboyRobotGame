@@ -1,43 +1,35 @@
-using Fungus;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Blinker : MonoBehaviour
 {
-    public Image blackscreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Image uiImage; // Assign your UI Image here
+    public float fadeDuration = 2.0f; // Duration of the fade-out in seconds
+    private float elapsed = 0.0f;
+    private bool isFading = false;
 
-    public void Wake()
-    {
-        StartCoroutine(WakeFade());
-    }
-
-    public void Blink()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isFading && uiImage != null)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(1.0f, 0.0f, elapsed / fadeDuration); // Gradually changes alpha from 1 to 0
+            Color newColor = uiImage.color;
+            newColor.a = alpha;
+            uiImage.color = newColor;
+
+            // Stop fading when duration is complete
+            if (elapsed >= fadeDuration)
+            {
+                isFading = false;
+            }
+        }
     }
 
-    public IEnumerator WakeFade()
+    public void StartFade()
     {
-        var tempcolor = blackscreen.color;
-        float currentOpacity = tempcolor.a;
-        tempcolor.a = 1f;
-        while (tempcolor.a != 0f)
-        {
-            Mathf.Lerp(currentOpacity, 1, 0.5f);
-        }
-        return null;
+        // Reset variables and begin fading
+        elapsed = 0.0f;
+        isFading = true;
     }
 }

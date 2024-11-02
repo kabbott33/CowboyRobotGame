@@ -1255,7 +1255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc4e2ba603b1da4bb204ee159bd0af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackscreen: {fileID: 1224829864}
+  uiImage: {fileID: 0}
+  fadeDuration: 2
 --- !u!4 &72511447
 Transform:
   m_ObjectHideFlags: 0
@@ -23935,7 +23936,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -24009,7 +24010,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005915067}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -24544,7 +24545,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2053943256}
   selectedCommands:
-  - {fileID: 2053943264}
+  - {fileID: 2053943259}
   variables: []
   description: 
   stepPause: 0
@@ -25417,7 +25418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -26783,25 +26783,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 4782763083682616188}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Horatio sold Manny dynamite!
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 3049239026039669044}
-  altLocation: {fileID: 3049239026039669044}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 1085879442608815936}
-  altEvidence2: {fileID: 6246346799402570097}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 7920995344197053271}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &126023822724899359
 MonoBehaviour:
@@ -32686,26 +32686,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Splintered wood and shattered boards. Something broke the stable wall
-    with great force.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 5162674428559925058}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 880507309739371830}
-  altEvidence2: {fileID: 3744881464559561570}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 1573571804469965916}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!222 &490186013694830410
 CanvasRenderer:
@@ -40971,9 +40970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de52e6f0aef0d47898992d0255c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 4450021051488210453}
-  startBlockName: BBTree01
-  player: {fileID: 8199623288739203021}
 --- !u!114 &1205812155326970611
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -45083,9 +45079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de52e6f0aef0d47898992d0255c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 4450021051488210453}
-  startBlockName: GGTree0
-  player: {fileID: 8199623288739203021}
 --- !u!114 &1389098059737794421
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -50754,13 +50747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0201258aa1b57ac42a9fc2b20780e0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 5
-  isPaused: 0
-  isRotating: 0
-  UI: {fileID: 0}
-  stringContainer: {fileID: 0}
-  nodeScaler: {fileID: 0}
-  dayEnding: 0
 --- !u!1 &1729756629427049452
 GameObject:
   m_ObjectHideFlags: 0
@@ -59662,9 +59648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de52e6f0aef0d47898992d0255c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 4450021051488210453}
-  startBlockName: FPTree01
-  player: {fileID: 8199623288739203021}
 --- !u!224 &2141311685286405381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64169,25 +64152,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a5
-  preReq: {fileID: 4092066272384523531}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: When did it happen? Who has an alibi?
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 6317739457432993044}
+  location: {fileID: 0}
   altLocation: {fileID: 0}
-  line: {fileID: 6163692235057552780}
+  line: {fileID: 0}
   isInference: 0
   isEvidence: 0
   altEvidence1: {fileID: 0}
   altEvidence2: {fileID: 0}
-  defaultNode: 1
-  text: {fileID: 2225413188081861176}
+  defaultNode: 0
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!1 &2319318472132444006
 GameObject:
@@ -64365,26 +64348,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Dynamite must have been used to break the horse out of the stable.
-    Who has access to a thing like that?
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 8963353194619525123}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
-  isInference: 1
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
+  isInference: 0
   isEvidence: 0
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 7640608262151196506}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!223 &2334693062911445731
 Canvas:
@@ -64710,25 +64692,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Manny is one of the only people in town with access to explosives.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 6909655533455781587}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
-  isInference: 1
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
+  isInference: 0
   isEvidence: 0
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 6907216440827084597}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &2394296549199009786
 MonoBehaviour:
@@ -64772,25 +64754,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 9149836072643978979}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: HANG HIM
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 6359317912091508902}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
-  isInference: 1
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
+  isInference: 0
   isEvidence: 0
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 4882374514254063690}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &2397846475325039234
 MonoBehaviour:
@@ -75227,25 +75209,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a4
-  preReq: {fileID: 4092066272384523531}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Who would've wanted to steal the horse?
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 1332394397626437123}
+  location: {fileID: 0}
   altLocation: {fileID: 0}
-  line: {fileID: 6163692235057552780}
+  line: {fileID: 0}
   isInference: 0
   isEvidence: 0
   altEvidence1: {fileID: 0}
   altEvidence2: {fileID: 0}
-  defaultNode: 1
-  text: {fileID: 1237221245585877496}
+  defaultNode: 0
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!222 &2777741042573130916
 CanvasRenderer:
@@ -80222,7 +80204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -82902,25 +82883,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 4782763083682616188}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Gunpowder was found at Manny's residence.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 3049239026039669044}
-  altLocation: {fileID: 3049239026039669044}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 6246346799402570097}
-  altEvidence2: {fileID: 1085879442608815936}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 4075135335217645265}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &2956291617721865820
 MonoBehaviour:
@@ -89222,25 +89203,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Scorch marks on the splintered wood wall of the stable.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 5162674428559925058}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 8283742414690888544}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &3363230900635941672
 MonoBehaviour:
@@ -93294,7 +93275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -98607,25 +98587,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Manny loves horses.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 8135186953714536241}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
-  isInference: 1
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
+  isInference: 0
   isEvidence: 0
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 8078248246805601717}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &3731889959470759682
 MonoBehaviour:
@@ -99269,25 +99249,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 5126570048413795943}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: 'Manny''s residence was covered head to toe in equine paraphernalia. '
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 2910067599996255940}
-  altLocation: {fileID: 5426199842630892773}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 916016222290605956}
-  altEvidence2: {fileID: 46661358149957557}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 80759581866700755}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!1 &3780679803576261561
 GameObject:
@@ -99876,7 +99856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -115253,25 +115232,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 4715137351621690766}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Everyone in town seems to be heavy slepers.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 6982336305770388679}
-  altLocation: {fileID: 6128999021930103904}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 413854701093781127}
-  altEvidence2: {fileID: 413854701093781127}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 3741094787319319832}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &4242944931412415165
 MonoBehaviour:
@@ -117457,25 +117436,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 5126570048413795943}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: 'Barney revealed that Manny has always wanted to ride a horse. '
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 2910067599996255940}
-  altLocation: {fileID: 5426199842630892773}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 1162330136565935759}
-  altEvidence2: {fileID: 916016222290605956}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 2107552110090938445}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &4497243293771389525
 MonoBehaviour:
@@ -133492,25 +133471,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 5126570048413795943}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Manny has started to wear spurs.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 2910067599996255940}
-  altLocation: {fileID: 5426199842630892773}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 1162330136565935759}
-  altEvidence2: {fileID: 46661358149957557}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 726499945008152622}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!23 &5092881430518388445
 MeshRenderer:
@@ -134815,7 +134794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -136334,7 +136312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -155738,7 +155715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -156897,26 +156873,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Dynamite must have been used to break the horse out of the stable.
-    Who has access to a thing like that?
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 7830815623414513348}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
-  isInference: 1
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
+  isInference: 0
   isEvidence: 0
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 5785375022253167995}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &6263679080760606765
 MonoBehaviour:
@@ -158034,25 +158009,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a2
-  preReq: {fileID: 4092066272384523531}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: A horse, stolen right from the stable. Who could've done this?
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 2319318472132444006}
+  location: {fileID: 0}
   altLocation: {fileID: 0}
   line: {fileID: 0}
   isInference: 0
   isEvidence: 0
   altEvidence1: {fileID: 0}
   altEvidence2: {fileID: 0}
-  defaultNode: 1
-  text: {fileID: 39776148439159086}
+  defaultNode: 0
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!23 &6328169003594939678
 MeshRenderer:
@@ -167023,7 +166998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -171103,9 +171077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de52e6f0aef0d47898992d0255c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 4450021051488210453}
-  startBlockName: MMTree01
-  player: {fileID: 8199623288739203021}
 --- !u!114 &6826446242903300289
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -173399,25 +173370,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Gunpowder residue found at the scene of the crime.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 5162674428559925058}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 3744881464559561570}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 4141896251680369833}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &7043660711842768048
 MonoBehaviour:
@@ -179298,25 +179269,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 1103956044576443272}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Manny is the only one who stays up late.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 278903025045253910}
-  altLocation: {fileID: 7239009122537595073}
-  line: {fileID: 6163692235057552780}
-  isInference: 1
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
+  isInference: 0
   isEvidence: 0
-  altEvidence1: {fileID: 3216059136380347102}
-  altEvidence2: {fileID: 880507309739371830}
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 3041275935616915474}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!33 &7264628933431091184
 MeshFilter:
@@ -187147,25 +187118,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 4092066272384523531}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Who was capable of doing this?
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 2150169769146946602}
+  location: {fileID: 0}
   altLocation: {fileID: 0}
-  line: {fileID: 6163692235057552780}
+  line: {fileID: 0}
   isInference: 0
   isEvidence: 0
   altEvidence1: {fileID: 0}
   altEvidence2: {fileID: 0}
-  defaultNode: 1
-  text: {fileID: 3793534583313557178}
+  defaultNode: 0
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!65 &7620053860834458298
 BoxCollider:
@@ -187521,9 +187492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de52e6f0aef0d47898992d0255c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 4450021051488210453}
-  startBlockName: HOTree01 (Copy)
-  player: {fileID: 8199623288739203021}
 --- !u!64 &7624653824598889481
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -189886,26 +189854,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 902814466648292961}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: The Priest says that Manny cannot sleep, tormented nightly by a guilty
-    conscious.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 1631172275030216069}
-  altLocation: {fileID: 1631172275030216069}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 3047988540449560620}
-  altEvidence2: {fileID: 4954029405433251456}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 5796987582821006439}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!114 &7796393505708539170
 MonoBehaviour:
@@ -195394,9 +195361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de52e6f0aef0d47898992d0255c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 4450021051488210453}
-  startBlockName: DITree01
-  player: {fileID: 8199623288739203021}
 --- !u!114 &8355184836243301691
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -195631,7 +195595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yapper: {fileID: 5803308550049041145}
   volume: 1
   loop: 1
   targetAudioSource: {fileID: 0}
@@ -200005,25 +199968,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 4715137351621690766}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: There was an explosion, but no one seemed to have heard it.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 6982336305770388679}
-  altLocation: {fileID: 6128999021930103904}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 166312116956929291}
-  altEvidence2: {fileID: 166312116956929291}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 3391147601684350331}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!1 &8583469152540045010
 GameObject:
@@ -208410,26 +208373,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca99509214954af4a99902212c606089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: a3
-  preReq: {fileID: 902814466648292961}
+  identifier: 
+  preReq: {fileID: 0}
   noPreReq: 0
   flowchart: {fileID: 0}
-  description: Breaking confidentiality, Doc Irving revealed that Manny suffers from
-    insomnia.
+  description: 
   isInBoard: 0
   evidence: {fileID: 0}
   parentAfterDrag: {fileID: 0}
-  location: {fileID: 1631172275030216069}
-  altLocation: {fileID: 1631172275030216069}
-  line: {fileID: 6163692235057552780}
+  location: {fileID: 0}
+  altLocation: {fileID: 0}
+  line: {fileID: 0}
   isInference: 0
-  isEvidence: 1
-  altEvidence1: {fileID: 4954029405433251456}
-  altEvidence2: {fileID: 3047988540449560620}
+  isEvidence: 0
+  altEvidence1: {fileID: 0}
+  altEvidence2: {fileID: 0}
   defaultNode: 0
-  text: {fileID: 3095027541668051524}
+  text: {fileID: 0}
   isLockedIn: 0
-  board: {fileID: 2293688030887858481}
+  board: {fileID: 0}
   newNodes: {fileID: 0}
 --- !u!224 &8915616254223235672
 RectTransform:
